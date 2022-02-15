@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import {FaBars} from 'react-icons/fa'
-import Cart from '../widgets/CartView';
+import CartView from '../widgets/CartView';
 import './NavBar.css';
 
     const Navbar = () => {

@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+# Bienvenido al Repositorio del Proyecto LA BOHÈME :smiley:
+___
+### **Autor**: Ariel Gustavo Zybala
+___
+##### *Esta presentación es la pre-entrega del proyecto final, del curso ReactJS de la carrera de Fullstack, en el que se utiliza casi enteramente un pseudo-lenguaje que sirve de pre-procesador de textos, creado por Facebook (JSX) y en parte CSS, sin articulaciones de scss o sass.*
+___
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Introducción
 
-In the project directory, you can run:
+El sitio web se encuentra en un desarrollo progresivo, en el constante input y output de los desafíos que se van presentando como metas del propio curso, su forma y construcción son respuestas al grupo de consignas impuestas, impartido por el docente **Fabricio Borgobello**, en la casa de estudio **CODERHOUSE**, con la ayuda de la docente: Tutora **Laura Therisod**.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Retos, Cambios, Adatación y Superación en el Proceso
+Cada desafío del curso esta representando en sí mismo un **reto**, puesto que requiere investigación y ejercicio; sin embargo, el mayor de los desafíos, es siempre comprender o saber dónde esta el punto en el que finalizan todas las tareas y cómo administrar el tiempo para cumplirlas. Y eso, se debe a la cantidad de tiempo que insumimos en cursar, leer, aprender y aplicar los conocimientos, a medida de que se va gestando y se implementa el proyecto individual semana a semana, en el contexto de un camino del que que ignora distancia y condiciones. Esto implica lidiar con las propias limitaciones y frustraciones, la auto-determinación y el convencimiento de las capacidades que se aplican.
+**Cambios**, los hay todo el tiempo, se ha creado un Wireframe de lo que se tiene por objetivo ideal; pero el proyecto en gestación, afronta mutaciones como respuesta a las consignas, que se requieren como contrapunto de la aprobación y acreditación de las capacidades individuales de quien suscribe. 
+La administración de las necesidades y las obligaciones van de la mano con **la adaptación y la superación** que se puede ver como la respuesta a las consignas de las rubricas impuestas en esta pre-entrega final del proyecto; es justo decir, que aún se esta trabajando en el equilibrio que dan el rose forzado en la incorporación de conocimientos mientras se esta trabajando y las gratificaciones que el cumplimiento de las tareas otorga; es parte de ese trabajo, conocer y formarse, desde lo simple a lo complejo intentando fluir por un proyecto compuesto con usos de node, de html, de css, de git, de javaScript y de conocer una librería enteramente nueva, que nunca he utilizado, entre otros aspectos.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+#### Archivos fundamentales para la aprobación de esta pre-entrega:
+* Árbol de Trabajo
+    1. App.js
+    2. pages
+        -Store
+         -Store.jsx
+         -ProductDetail.jsx
+    3. mokcs
+        - db.json
+    4. components
+        - Buttons
+            - CounterTab.jsx
+        - Products
+            - ProductCard.jsx
+            - DetailCard.jsx
+        - Navigation
+            - NavBar.jsx
+        - Widgets
+            Cart.jsx
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Es importante indicar que en ellos esta lo necesario, pero que hay un grupo de archivos no mencionados que hacen al contexto de trabajo y que dan forma la resto del sitio como una sola entidad**

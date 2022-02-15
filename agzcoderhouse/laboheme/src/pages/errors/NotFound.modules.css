@@ -1,0 +1,59 @@
+.errorNotFound{
+    z-index: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 6em 3em;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../../../public/Media/WallPicError.jpg');
+}
+
+.errorNotFound__shaper{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 50vh;
+}
+
+.errorNotFound__title {
+    color: rgb(255, 255, 255);
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: calc(3vw + 1em);
+}
+
+.errorNotFound__text {
+    color: rgb(255, 255, 255);
+    font-family: 'Lexend Deca' , sans-serif;
+    font-size: calc(1vw + .8em);
+}
+
+.errorNotFound__icon {
+    position: absolute;
+    margin: -5px 0px 0px 5px;
+    color: rgb(255, 255, 255);
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: calc(1vw + .8em);
+    transform: rotateY(180deg);
+    animation: jump 500ms infinite alternate;
+
+}
+@keyframes jump {
+    from{
+        font-size: calc(1vw + .7em); 
+
+    }
+    to{
+        color: rgb(208, 208, 208);
+        transform: rotateY(0deg);
+        font-size: calc(1vw + .9em);
+    }
+
+}

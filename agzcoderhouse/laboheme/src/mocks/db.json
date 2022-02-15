@@ -1,5 +1,166 @@
 {
-    "products":[
-        {"id":0}
-    ]
-}
+    "inventory":[
+        {   
+            "id": "1",
+            "category": "appetizer",
+            "imageSrc": "../../Media/Appetizer/Paranoid.jpg", 
+            "name": "Paranoid",
+            "ingredient":"10 Cubos de Mandioca (Yuca) empanados con sazonado de perejil, ajo y mostaza ahumada en polvo. Viene con dip de manteca de cilantro y limón.",
+            "price":350,
+            "stock":10
+        },
+        {
+            "id": "2",
+            "category": "appetizer",
+            "imageSrc":"../../Media/Appetizer/LittleWing.jpg",
+            "name":"Little Wing",
+            "ingredient":"6 Pechuguitas pollo extra crocantes, sazonadas con tomillo, albahaca, orégano, sal de apio, pimienta negra, mostaza en polvo, pimentón, sal de ajo y jengibre en polvo. Vienen con dip de salsa barbacoa.",
+            "price":480,
+            "stock":100
+        },
+        {   
+            "id": "3",
+            "category": "appetizer",
+            "imageSrc": "../../Media/Appetizer/HelterSkelter.jpg", 
+            "name":"Helter Skelter" ,
+            "ingredient": "12 Aros de cebolla empanados y fritos, sazonado de ajo y orégano ahumado en polvo, vienen con salsa de mayonesa de ajo, aderezada de oliva y limón.",
+            "price":480,
+            "stock":200
+        },
+        {   
+            "id": "4",
+            "category": "appetizer",
+            "imageSrc": "../../Media/Appetizer/Fuel.jpg", 
+            "name": "Fuel" ,
+            "ingredient": "350 grs de papas fritas baston home made, con lluvia de rayadura de parmesano y cebolla de verdeo, vienen con salsa de mayonesa de ajo, aderezada de oliva y limón.",
+            "price":500,
+            "stock":200
+        },
+        {   
+            "id": "5",
+            "category": "appetizer",
+            "imageSrc": "../../Media/Appetizer/Kashmir.jpg", 
+            "name": "Kashmir",
+            "ingredient": "350 grs de boniatos horneados home made, con lluvia de rayadura de ajo y romero ahumado, vienen con dos salsa, una sweet relish (pepino y curcuma) y otra de cebolla caramelizada picante ahumada (cebolla, tomates ahumados, jalapeño habanero y cilantro).",
+            "price":500,
+            "stock":200
+        },
+        {
+            "id": "6",
+            "category": "appetizer",
+            "imageSrc": "../../Media/Appetizer/Thunderstruck.jpg", 
+            "name": "Thunderstruck",
+            "ingredient": "500grs de Nachos de maíz, baño de queso cheddar y bacon crispy, con dip de salsas guacamole y pico de gallo.",
+            "price":500,
+            "stock":200
+        },
+        {
+            "id": "7",
+            "category": "burger",
+            "imageSrc": "../../Media/Burger/AlfredHitchcock.jpg", 
+            "name": "Alfred Hitchcock",
+            "ingredient": "Medallón de falda 130 grs, lechuga, jalapeños verdes asados, cebollas cocinadas al bourbon, queso muzzarella grillado, panceta y huevo, salsa de mostaza ahumada y nueces, en pan con parmesano.",
+            "price":660,
+            "stock":200 
+        },
+        {
+            "id": "8",
+            "category": "burger",
+            "imageSrc": "../../Media/Burger/MelissaMcCarthy.jpg", 
+            "name": "Melissa McCarthy",
+            "ingredient": "Suprema de pollo de 150grs, rebozado de panko y avena, cebollas, perejil, espinaca, ají (no pica), brotes de soja, repollo curado, fondue de cheddar, mostaza dijon aderezada con miel, en pan de brioche.",
+            "price":720,
+            "stock":200 
+        },
+        {
+            "id": "9",
+            "category": "burger",
+            "imageSrc": "../../Media/Burger/SafaaErruas.jpg", 
+            "name": "Safaa Erruas",
+            "ingredient": "Medallón NOTBURGER 150grs, tomate, queso vegan fundido, espinaca, cebollas moradas, con mayo notco garlic y spicy, en pan vegano.",
+            "price":680,
+            "stock":200 
+        },
+        {
+            "id": "10",
+            "category": "burger",
+            "imageSrc": "../../Media/Burger/StephenKing.jpg", 
+            "name": "Stephen King",
+            "ingredient": "Hamburguesa doble de lomo de 100 grs, lechuga, tomate, doble cheddar, panceta, cebolla caramelizada, mayonesa de rúcula y mani tostado, en pan brioche.",
+            "price":780,
+            "stock":200 
+        },
+        {
+            "id": "11",
+            "category": "burger",
+            "imageSrc": "../../Media/Burger/YoshiakiKawajiri.jpg", 
+            "name": "Yoshiaki Kawajiri",
+            "ingredient": "Medallón de falda de 150grs, papas pay horneadas, ajo frito, cebollas asadas, fondue de cheddar, mayonesa de queso blue, cátsup ahumado agridulce con barbacoa, panceta en pan de papa.",
+            "price":790,
+            "stock":200 
+        },
+        {
+            "id": "12",
+            "category": "burger",
+            "imageSrc": "../../Media/Burger/VladimirKush.jpg", 
+            "name": "Vladímir Kush",
+            "ingredient": "Doble medallón de vacío de 100grs, cebolla morada y cebolla caramelizada, pickles de pepino agridulce, morrón colorado asado, cheddar, panceta curada en sal, mayonesa en cúrcuma y oliva, en pan de papa con lluvia de sésamo integral tostado.",
+            "price":840,
+            "stock":200 
+        },
+        {
+            "id": "13",
+            "category": "beer",
+            "imageSrc": "../../Media/Beer/Amber.jpg",
+            "name": "Amber Lager",
+            "ingredient": "ABV: 4,5%% , IBU: 14.5",
+            "price": 300, 
+            "stock": 500
+        },
+        {
+            "id": "14",
+            "category": "beer",
+            "imageSrc": "../../Media/Beer/Bohemian.jpg",
+            "name": "Bohemian Pilsener", 
+            "ingredient": "ABV: 5,2%% , IBU: 18",
+            "price": 300, 
+            "stock": 1000
+        },
+        {
+            "id": "15",
+            "category": "beer",
+            "imageSrc": "../../Media/Beer/KM24.jpg",
+            "name": "KM 24.7",
+            "ingredient": "ABV: 4,5%% , IBU: 36",
+            "price": 300, 
+            "stock": 1000
+        },
+        {
+            "id": "16",
+            "category": "beer",
+            "imageSrc": "../../Media/Beer/Kune.jpg",
+            "name": "Küne",
+            "ingredient": "ABV: 5%% , IBU: 22",
+            "price": 300, 
+            "stock": 10
+        },
+        {
+            "id": "17",
+            "category": "beer",
+            "imageSrc": "../../Media/Beer/Porter.jpg",
+            "name": "Porter", 
+            "ingredient": "ABV: 5,5%% , IBU: 35",
+            "price": 300, 
+            "stock": 1000
+        },
+        {
+            "id": "18",
+            "category": "beer",
+            "imageSrc": "../../Media/Beer/Weisse.jpg",
+            "name": "Weisse", 
+            "ingredient": "ABV: 5,1%% , IBU: 20",
+            "price": 300, 
+            "stock": 10
+        }
+        ]
+    }

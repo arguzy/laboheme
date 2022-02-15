@@ -1,0 +1,85 @@
+.counterBox{
+	width: 100px;
+	height: fit-content;
+	display: flex;
+	justify-content: space-between;
+	background: linear-gradient(120deg, rgb(255, 255, 255) 30%, rgba(255, 255, 255, 0.6) 80%);
+	border-radius: 20px;
+
+}
+
+.counterBox__button {
+	color: rgb(255, 255, 255);
+	font-size: 8px;
+	border: none;
+	border-radius: 20px;
+	padding: 5px 10px;
+	background: linear-gradient(180deg, rgb(238, 192, 99) 5%, rgb(207, 161, 70) 100%);
+	text-shadow: 2px 1px 1px rgb(143, 102, 40);
+	box-shadow: inset 1px 1px 2px 0px rgb(247, 232, 187);
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+    
+}
+
+.counterBox__button:hover {    
+	background: linear-gradient(120deg, rgba(223, 134, 0, 0.5)  30%, rgb(255, 175, 36)  80%);
+
+}
+
+.counterBox__num{
+	font-family: 'Josefin Sans', sans-serif;
+	padding: 5px 10px;
+}
+
+.cardProducts__DetailBtn {
+	margin: 0px 5px;
+	padding: 0px 0px;
+	font-family: 'Lexend Deca', sans-serif;
+	color: rgb(255, 255, 255);
+	font-size: 10px;
+	border: 1px solid rgba(170, 115, 3, 0.6);
+	border-radius: 5px;
+	background: linear-gradient(180deg, rgba(238, 192, 99, 0.6) 5%, rgba(207, 161, 70, 0.6) 100%);
+	text-shadow: 2px 1px 1px rgb(143, 102, 40);
+	box-shadow: inset 1px 1px 2px 0px rgb(247, 232, 187);
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+}
+
+.cardProducts__DetailBtn:hover {
+	background: linear-gradient(180deg, rgba(223, 134, 0, 0.5)  5%, rgb(255, 175, 36) 100%);
+}
+.cardProducts__DetailBtnIcon{
+	font-size: 15px;
+	padding: 5px 5px;
+	border-right: 1px solid rgba(255, 255, 255, 0.076);
+	box-shadow: rgba(41, 41, 41, 0.14) -1px 0px 0px inset;
+}
+
+.cardProducts__DetailBtnText {
+	font-size: 1.4em;
+	padding: 10px;
+}
+
+.cardProducts__btnBuy{
+	margin: 0px 5px;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	font-family: 'Lexend Deca', sans-serif;
+	color: rgb(255, 255, 255);
+	font-size: 1em;
+	background: linear-gradient(180deg, rgb(238, 192, 99) 5%, rgb(207, 161, 70) 100%);
+	text-shadow: 2px 1px 1px rgb(143, 102, 40);
+	box-shadow: inset 1px 1px 2px 0px rgb(247, 232, 187);
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+}
+
+.cardProducts__btnBuy:hover {
+	background: linear-gradient(180deg, rgba(223, 134, 0, 0.5)  5%, rgb(255, 175, 36) 100%);
+}

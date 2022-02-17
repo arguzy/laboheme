@@ -1,5 +1,5 @@
 import React from 'react';
-import { getFirestore } from "../../firebase/index";
+
 
 
     const Faqs = () => {

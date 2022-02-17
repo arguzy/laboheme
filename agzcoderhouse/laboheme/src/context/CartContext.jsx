@@ -1,5 +1,5 @@
 import { createContext, useContext, useState } from "react";
-import PopUp from "../components/widgets/PopUp";
+
 
 export const CartContext = createContext({});
 
@@ -19,7 +19,7 @@ export const CartProvider = ({ children }) => {
         let index = cart.findIndex((e) => e.product.id === preOrder.product.id);
         let stoked = cart[index].quantity + preOrder.quantity;
         if (stoked > cart[index].product.stock) {
-          <PopUp message={"Sin más stock"} />;
+          alert("No hay más Stock");
         } else {
           let newAmount = cart[index].amount + preOrder.amount;
           cart[index].quantity = stoked;

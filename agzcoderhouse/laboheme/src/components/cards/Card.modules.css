@@ -322,13 +322,18 @@ margin-right: 10px;}
 
 @media (min-width: 690px) {  
     .detailCard{
-        min-height: fit-content;
-        padding: 0px 0px 50px 0px;
-    }  
+        all:unset;
+        display:block;
+        width: auto;
+        min-height: 110vh;
+        background: linear-gradient(45deg, rgb(21, 21, 21) 0%, rgba(116, 116, 116, 0.8) 50%, rgb(34, 34, 34) 100%);
+    }
+
     .detailCard__container{
         width: 100vw;
         padding: 1em 2em;
         display: grid;
+        flex-grow: .6;
         grid-template-columns:2fr 1fr 1fr;
         grid-template-rows: 15vh 5vh 40vh auto;
     }

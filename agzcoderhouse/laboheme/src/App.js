@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import "./Styles.css";
 import Navbar from "./components/navigation/Navbar";
 import Home from "./pages/home/Home";
 import Contact from "./pages/contact/Contact";
@@ -8,10 +7,12 @@ import Faqs from "./pages/faqs/Faqs";
 import Store from "./pages/store/Store";
 import ProductDetail from "./pages/store/ProductDetail";
 import OrderSummary from "./pages/store/OrderSummary";
+import CheckOut from "./pages/store/CheckOut";
 import PageNotFound from "./pages/errors/PageNotFound";
 import { ProductDataProvider } from "./context/ProductDataContext";
 import { CartProvider } from "./context/CartContext";
 import Greeting from "./pages/store/Greeting";
+import "./App.css"
 //mport Footer from './components/footer/Footer';
 
 function App() {

@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { useModal } from '../hooks/useModal';
 import { useNavigate } from 'react-router-dom';
 import Modal from './Modal';

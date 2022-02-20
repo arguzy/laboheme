@@ -6,6 +6,7 @@ import Contact from "./pages/contact/Contact";
 import Faqs from "./pages/faqs/Faqs";
 import Store from "./pages/store/Store";
 import ProductDetail from "./pages/store/ProductDetail";
+import Category from "./pages/store/Category";
 import OrderSummary from "./pages/store/OrderSummary";
 import CheckOut from "./pages/store/CheckOut";
 import PageNotFound from "./pages/errors/PageNotFound";
@@ -32,11 +33,11 @@ function App() {
                 <Route path="store">
                   <Route index element={<Store />} />
                   <Route path="products/:ident" element={<ProductDetail />} />
+                  <Route path="category/:category" element={<Category />} />
                 </Route>
-                <Route path="category/:categotyid" element={<Store/>} />
                 <Route path="ordersumary" element={<OrderSummary />} />
                 <Route path="checkOut" element={<CheckOut />} />
-                <Route path="greeting" element={<Greeting />} />
+                <Route path="greeting/:orderId" element={<Greeting />} />
               </Route>
               <Route path="*" element={<PageNotFound />} />
             </Routes>

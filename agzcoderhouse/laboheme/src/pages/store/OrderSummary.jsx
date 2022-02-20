@@ -31,7 +31,7 @@ const OrderSumary = () => {
               <MdOutlinePayments />
             </span>
             <span className="totals__buttonTextPay">
-              <button>Pagar</button>
+              <button><Link to="/checkOut">Pagar</Link></button>
             </span>
           </div>
         </div>

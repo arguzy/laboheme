@@ -1,11 +1,12 @@
 import { createContext, useContext, useState } from "react";
 
 
+
 export const CartContext = createContext({});
 
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
-
+ 
 
   const addProduct = (product, quantity, amount) => {
     const preOrder = { product, quantity, amount };
@@ -41,6 +42,9 @@ export const CartProvider = ({ children }) => {
   const total = cart.map(obj => obj.amount).reduce((preValue, currentValue) => preValue + currentValue, 0);
 
   const cartLenght = cart.map(obj => obj.quantity).reduce((preValue, currentValue) => preValue + currentValue, 0)
+
+
+
 
   return (
     <CartContext.Provider

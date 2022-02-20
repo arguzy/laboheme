@@ -1,8 +1,17 @@
 import React from 'react'
+import ContactForm from '../../components/forms/ContactForm';
+
+
+
+
 
 const CheckOut = () => {
+
   return (
-    <div>CheckOut</div>
+    <div>
+      <h2>introduzca sus datos</h2>
+      <ContactForm/>
+    </div>
   )
 }
 

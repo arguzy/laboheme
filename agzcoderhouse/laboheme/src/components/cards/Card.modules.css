@@ -326,6 +326,7 @@ margin-right: 10px;}
         display:block;
         width: auto;
         min-height: 110vh;
+        width: 100vw;
         background: linear-gradient(45deg, rgb(21, 21, 21) 0%, rgba(116, 116, 116, 0.8) 50%, rgb(34, 34, 34) 100%);
     }
 
@@ -341,8 +342,9 @@ margin-right: 10px;}
     .detailCard__image{
         all:unset;
         margin: 0em  1em ;
-        width: 40vw;
-        height: 50vh;
+        justify-self: center;
+        width: clamp(40vw, 400px, 45vw);
+        height: clamp(35vw, 350px, 40vh);
         border: 2px solid black;
         grid-row: 3; 
         grid-column: 1/2;
@@ -370,6 +372,7 @@ margin-right: 10px;}
     }
     
     .detailCard__btnBackBox{
+        width: 90%;
         padding: 0em 1em;
         grid-row: 1; 
         grid-column: 1/4;
@@ -377,6 +380,7 @@ margin-right: 10px;}
     }
     
     .detailCard__btnBack{
+        text-align: right;
         background: none;
         border: none;
         box-shadow: none;
@@ -396,6 +400,8 @@ margin-right: 10px;}
     }
     
     .detailCard__ingredientBox{
+        width: clamp(35vw, 350px, 40vw);
+        height: clamp(30vw, 350px, 35vw);
         grid-row: 2; 
         grid-column: 1/4;
 
@@ -404,14 +410,14 @@ margin-right: 10px;}
     .detailCard__btns,
     .detailCard__amountBox{
         justify-content: space-around;
-        padding: 1em;
+        padding: .8em;
     }
     .detailCard__amountBox{
         grid-row: 3; 
         grid-column: 1/4;
         justify-content: space-evenly;
         align-items: center;
-        width: 45vw;
+        width: clamp(30vw, 350px, 35vw);
 
     }
 
@@ -423,7 +429,7 @@ margin-right: 10px;}
     }
 
     .detailCard__btns{
-        width: 90%;
+        width: clamp(25vw, 250px, 30vw);
         justify-content: space-between;
     }
     .detailCard__price{
@@ -448,6 +454,38 @@ margin-right: 10px;}
         background: linear-gradient(120deg, rgba(223, 134, 0, 0.5)  30%, rgb(255, 175, 36)  80%);
     
     }
+
+    @media (min-width: 1000px){
+        .detailCard__image{
+            width: clamp(30vw, 400px, 35vw);
+            height: clamp(25vw, 350px, 30vh);
+        }
+        .detailCard__btnBackBox{
+            width: 100%;
+        }
+
+        
+        .detailCard__ingredientBox{
+            width: clamp(45vw, 30em, 50vw);
+            height: clamp(25vh, 450px, 35vh);
+            
+         
+        }
+
+        .detailCard__ingredient{
+            font-size: 1.5em;
+        }
+
+
+        .detailCard__amountBox{
+            width: clamp(45vw, 30em, 50vw);
+    
+        }
+        .detailCard__btns{
+            width: clamp(45vw, 30em, 50vw);
+         }
+    }
+
 
     @keyframes flickerShadowImage {
         0%{box-shadow: -5px 10px 5px 3px rgba(0, 0, 0, 0);}

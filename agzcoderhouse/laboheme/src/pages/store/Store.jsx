@@ -4,34 +4,37 @@ import ProductCard from "../../components/cards/ProductCard";
 import Spinner from "../../components/widgets/Spinner";
 import PageNotFound from "../errors/PageNotFound";
 import "./Store.modules.css";
-//import { Link } from "react-router-dom";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router";
+
 
 
 const Store = () => {
 
   const { data, errors, isLoading } = useContext(ProductDataContext);
+  const navigate = useNavigate()
 
-  const navigate = useNavigate();
+  let repeat;
+  function matching(direction){
+    repeat = data.some((e) => direction === e.category);
+    if (repeat === true){
+      navigate((`category/${direction}`))
+  }
+
+  }
 
   if (isLoading) {
     return <Spinner />;
   } else if (errors) {
     return <PageNotFound />;
   }
-  let categoryid = "appetizer";
-  let categoryid2 = "burger";
-  let categoryid3 = "beer";
 
 
-
-  return (
-    <section className="menu">
-      <ul>
-        <li><button onClick={() => navigate(`category/${categoryid}`)}>APERITIVOS</button></li>
-        <li><button onClick={() => navigate(`category/${categoryid2}`)}>HAMBURGUESAS</button></li>
-        <li><button onClick={() => navigate(`category/${categoryid3}`)}>CERVEZAS</button></li>
-      </ul>
+ 
+ return (
+   <section className="menu">
+      <button onClick={()=> matching("appetizer")}>Aperitivos</button>
+      <button onClick={()=> matching("burger")}>Hamburguesas</button>
+      <button onClick={()=> matching("beer")}>Cervezas</button>
       <div className="menu__cover">
         <div className="menu__titleBox">
           <h1 className="menu__title">APERITIVOS</h1>

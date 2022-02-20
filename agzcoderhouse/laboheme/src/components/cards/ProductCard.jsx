@@ -8,7 +8,7 @@ function ProductCard ({ident, imageSrc , name, price}) {
     const navigate = useNavigate();
     
     return (
-        
+    
         <div className="cardProducts">
             <div className="cardProducts__ImageBox">
                 <img className="cardProducts__Image" src={imageSrc} alt={name} />
@@ -22,9 +22,9 @@ function ProductCard ({ident, imageSrc , name, price}) {
 
                 <div className="cardProducts__toBuy">
                     <p className="cardProducts__price">Precio:$ {price}</p>
-                    <button className="cardProducts__DetailBtn" onClick={() => navigate(`products/${ident}`)}>
+                    <button className="cardProducts__DetailBtn" onClick={() => navigate (`/Store/products/${ident}`, {replace: true})}>
                         <span className='cardProducts__DetailBtnIcon'><BsCartPlusFill/></span>
-                        <span className="cardProducts__DetailBtnText">Agregar</span>
+                        <span className="cardProducts__DetailBtnText"> Agregar</span>
                     </button>
                 </div>
             </div>

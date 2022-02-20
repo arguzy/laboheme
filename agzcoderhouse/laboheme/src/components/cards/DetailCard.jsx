@@ -5,20 +5,14 @@ import { Link } from "react-router-dom";
 import { useCart } from "../../context/CartContext";
 import Modals from "../widgets/Modals";
 
+function DetailCard({ product, minus, plus, counter, amount, subtotal }) {
+  const { addProduct, cartLenght } = useCart();
 
+  const { imageSrc, name, ingredient, price, stock } = product;
 
-function DetailCard({product,  minus, plus,  counter,  amount,  subtotal}) {
-
-  const {addProduct, cartLenght } = useCart();
-
-  const {imageSrc,  name,  ingredient,  price,  stock} = product;
-  
-  const handleClickAdd = () =>{
-    addProduct(product, counter, amount)
-  }
-
-
-
+  const handleClickAdd = () => {
+    addProduct(product, counter, amount);
+  };
 
   return (
     <section className="detailCard">
@@ -42,10 +36,10 @@ function DetailCard({product,  minus, plus,  counter,  amount,  subtotal}) {
             <p className="detailCard__ingredient">{ingredient}</p>
           </div>
           {stock === counter && (
-              <div className="detailCard__fullStockTaked">
-                <p>No quedan más unidades</p>
-              </div>
-            )}
+            <div className="detailCard__fullStockTaked">
+              <p>No quedan más unidades</p>
+            </div>
+          )}
           <div className="detailCard__amountBox">
             <p
               className="detailCard__price"
@@ -68,9 +62,13 @@ function DetailCard({product,  minus, plus,  counter,  amount,  subtotal}) {
               Agregar
             </button>
             <button className="detailCard__btnBuyNow">
-              <Modals buttonText={"Finalizar"} message="Debes agregar algo al carrito" cartLenght={cartLenght} road={"/OrderSumary"}/>
+              <Modals
+                buttonText={"Finalizar"}
+                message="Debes agregar algo al carrito"
+                cartLenght={cartLenght}
+                road={"/OrderSumary"}
+              />
             </button>
-           
           </div>
         </div>
       </div>

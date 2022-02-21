@@ -36,7 +36,7 @@ const validationsForm = (form) => {
   return errors;
 };
 
-const ContactForm = () => {
+const CheckOutForm = () => {
   const {
     form,
     errors,
@@ -102,4 +102,4 @@ const ContactForm = () => {
   );
 };
 
-export default ContactForm;
+export default CheckOutForm;

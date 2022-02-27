@@ -1,0 +1,56 @@
+.contact {
+  width: 100vw;
+  background: linear-gradient(
+    34deg,
+    rgba(149, 149, 149, 1) 0%,
+    rgba(60, 60, 60, 1) 29%,
+    rgba(122, 122, 122, 1) 62%,
+    rgba(87, 87, 87, 1) 82%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+.contact__basis {
+  width: 100vw;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .contact__basis {
+    width: 100vw;
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.contact__titleBox {
+  width: 100vw;
+  margin-top: 50px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-items: center;
+  padding: 0.5em;
+  border-top: solid white 2px;
+  border-bottom: solid white 2px;
+  background: linear-gradient(
+    145deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(71, 71, 71, 1) 50%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  box-shadow: inset 1px 1px 1px 1px rgb(49, 40, 0);
+}
+
+.contact__title {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 2em;
+  text-align: center;
+  text-shadow: rgba(4, 4, 4, 0.7) -2px -2px 3px,
+    rgba(255, 255, 255, 0.8) 2px 2px 1px;
+}

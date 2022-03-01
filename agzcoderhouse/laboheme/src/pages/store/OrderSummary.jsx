@@ -7,9 +7,18 @@ import { BiTrash } from "react-icons/bi";
 import { MdOutlinePayments } from "react-icons/md";
 import { RiArrowGoBackFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 const OrderSumary = () => {
   const { cart, eraseProduct, total, eraseAllProduct } = useCart();
+  const navigate = useNavigate();
+  
+  function handleClickDeleteItem(itemToDelete){
+    eraseProduct(itemToDelete)  
+    if(cart.length <= 1){ navigate("/Store")}
+    
+    
+  }
 
   return (
     <section className="orderSummary">
@@ -30,8 +39,8 @@ const OrderSumary = () => {
             <span className="totals__buttonIconPay">
               <MdOutlinePayments />
             </span>
-            <span className="totals__buttonTextPay">
-              <button><Link to="/checkOut">Pagar</Link></button>
+            <span >
+              <button className="totals__buttonTextPay"><Link to="/checkOut">Pagar</Link></button>
             </span>
           </div>
         </div>
@@ -92,7 +101,7 @@ const OrderSumary = () => {
                         <button
                           type="button"
                           className="table__btnbox-text"
-                          onClick={() => eraseProduct(orderbuy.product.id)}
+                          onClick={()=> handleClickDeleteItem(orderbuy.product.id)}
                         >
                           QUITAR
                         </button>

@@ -4,11 +4,11 @@ import { ImCart } from 'react-icons/im';
 import { useCart } from '../../context/CartContext';
 
 const CartView = () => {
-    const { cartLenght } = useCart();
+    const { cartLength } = useCart();
 
     return (
         <div>
-            <span><Link to={cartLenght > 0 ? 'OrderSumary' : 'Store'} className='nav__shopIcon'><ImCart/></Link><p className='nav__shopConunt'>{cartLenght}</p></span>
+            <span onChange={cartLength}><Link to={cartLength > 0 ? 'OrderSumary' : 'Store'} className='nav__shopIcon'><ImCart/></Link><p className='nav__shopConunt'>{cartLength}</p></span>
         </div>
     )
 }

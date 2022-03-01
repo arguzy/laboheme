@@ -334,7 +334,6 @@ margin-right: 10px;}
         width: 100vw;
         padding: 1em 2em;
         display: grid;
-        flex-grow: .6;
         grid-template-columns:2fr 1fr 1fr;
         grid-template-rows: 15vh 5vh 40vh auto;
     }

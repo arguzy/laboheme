@@ -1,4 +1,5 @@
 import React from "react";
+import Map from "../../components/widgets/Map";
 import "./Contact.modules.css";
 import {
   GiLaurelsTrophy,
@@ -13,12 +14,14 @@ import Hero from "../../components/widgets/Hero";
 const Contact = () => {
   return (
     <section className="contact">
-      <div className="contact__hero">
+      <article className="contact__hero">
         <Hero backgrundHero="HeroContact" title="hola" text="lorem" />
-      </div>
+      </article>
       <article className="contact__drops">
         <span className="contact__titleBox">
-          <h2 className="contact__title">Nuestros Principios y Valores Fundantes</h2>
+          <h2 className="contact__title">
+            Nuestros Principios y Valores Fundantes
+          </h2>
         </span>
         <div className="contact__basis">
           <LittleBanners
@@ -26,7 +29,7 @@ const Contact = () => {
             icon={<GiLaurelsTrophy />}
             title="Calidad"
             text="Nos gusta hacer bien las cosas. Buscamos la excelencia en todo lo
-      que hacemos."
+    que hacemos."
           />
           <LittleBanners
             background="enterprising"
@@ -54,6 +57,33 @@ const Contact = () => {
             text="Sabemos trabajar nuestro bar, que alimenta a lo más importante, nuestros clientes."
           />
         </div>
+      </article>
+      <article className="contact__location">
+        <div className="contact__map">
+          <Map />
+        </div>
+        <div className="contact__locationTitleBox">
+          <h2 className="contact__locationTitle">¿Dónde esta el local?</h2>
+        </div>
+        <di className="contact__info">
+          <h3 className="contact__locationSubtitle">
+            Diás y Horarios de Atención
+          </h3>
+          <ul className="contact__infoList">
+            <li className="contact__infoItem">
+              <p>LUNES A DOMINGOS</p>
+            </li>
+            <li className="contact__infoItem">
+              <p>HORARIOS:</p>
+            </li>
+            <li className="contact__infoItem">
+              <p>12:00-12:00</p>
+            </li>
+            <li className="contact__infoItem">
+              <p>20:00-00:00</p>
+            </li>
+          </ul>
+        </di>
       </article>
     </section>
   );

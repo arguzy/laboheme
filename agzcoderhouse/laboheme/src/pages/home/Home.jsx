@@ -13,8 +13,8 @@ const Home = () => {
           <div className="hero__background"></div>
         </div>
         <div className="hero__marquee">
-          <div className="hero__titleBox">
-            <h1 className="hero__title">LA BOHÈME</h1>
+          <div className="hero__captionBox">
+            <h1 className="hero__caption">LA BOHÈME</h1>
           </div>
           <div className="hero__subtitleBox">
             <p className="hero__subtitle">

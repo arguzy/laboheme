@@ -1,0 +1,25 @@
+.swal-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.swal-modal {
+  border-radius: 25px;
+  padding: 10px;
+  background: linear-gradient(
+    34deg,
+    rgba(149, 149, 149, 1) 0%,
+    rgba(60, 60, 60, 1) 29%,
+    rgba(122, 122, 122, 1) 62%,
+    rgba(87, 87, 87, 1) 82%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  box-shadow: inset -20px -20px 20px 3px rgba(0, 0, 0, 0.9);
+  border: solid 3px rgb(165, 165, 165);
+}
+
+.swal-text {
+  font-size: x-large;
+  font-family: "Lexend Deca", sans-serif;
+  color: rgba(255, 255, 255, 0.844);
+  text-shadow: -1px 1px 1px rgb(177, 141, 64);
+}

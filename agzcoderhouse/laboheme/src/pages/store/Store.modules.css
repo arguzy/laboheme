@@ -13,6 +13,61 @@
   );
 }
 
+.menu__list{
+  list-style: none;
+  width: 100vw;
+  padding: 1em;
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.menu__listItem{
+  font-size: 2em ;
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 600;
+  color: rgb(255, 174, 0);
+  text-shadow: rgb(0 0 0 / 70%) 2px 3px 1px;
+}
+
+.menu__listItem button:hover{
+  text-shadow: rgb(0 0 0 / 70%) 2px 3px 1px,
+                white 2px 2px 15px;
+}
+.menu__listItem button:active{
+  text-shadow: rgb(0 0 0 / 70%) 2px 3px 1px,
+                white 2px 2px 15px;
+}
+
+.menu__comeBack {
+  margin: 1em;
+  border-radius: 25px;
+  padding: 1em;
+  width: fit-content;
+  height: fit-content;
+  border: 1px solid rgb(255, 174, 0);
+  box-shadow: 2px 3px 1px 1px rgb(0 0 0 / 70%) ;
+}
+.menu__comeBack a{
+  text-decoration: none;
+  font-size: 2em ;
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 600;
+  color: rgb(255, 174, 0);
+  text-shadow: rgb(0 0 0 / 70%) 2px 3px 1px;
+}
+
+.menu__comeBack:hover{
+  box-shadow: rgb(0 0 0 / 70%) 2px 3px 1px,
+  rgb(255, 174, 0) 1px 1px 15px;
+}
+.menu__comeBack a:hover{
+  text-shadow: rgb(0 0 0 / 70%) 2px 3px 1px,
+  rgb(255, 174, 0) 1px 1px 5px;
+  
+}
+
 .menu__cover {
   height: fit-content;
   display: flex;
@@ -43,6 +98,7 @@
 }
 
 .menu__productBox {
+  width: 90vw;
   display: flex;
   flex-flow: wrap;
   justify-content: center;
@@ -289,7 +345,6 @@
 
 .totals__buttonPay {
   font-family: "Lexend Deca", sans-serif;
-  color: rgb(255, 255, 255);
   font-size: 16px;
   border-radius: 10px;
   border: 1px rgb(201, 111, 0) solid;
@@ -312,13 +367,14 @@
 }
 .totals__buttonIconPay {
   padding: 6px 5px;
+
 }
-.totals__buttonTextPay {
-  padding: 6px 5px;
+.totals__buttonTextPay a{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  padding: .5em;
 }
-.totals__buttonTextPay button {
-  all: unset;
-}
+
 
 .trashAll {
   width: 100%;
@@ -368,3 +424,77 @@ button {
   justify-content: center;
   background: linear-gradient(0deg, rgba(147,159,175,1) 0%, rgba(8,8,20,1) 100%);
 }
+
+
+.checkOut{
+  background: url("../../../public/Media/formBack.jpg");
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-clip: content-box;
+
+}
+
+.checkOut__overley{
+  padding: 1em;
+  width: inherit;
+  min-height: 100vh;
+  background-color: rgba(24, 24, 24, 0.6);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content:flex-start;
+}
+
+.checkOut__framming{
+  width: 75vw;
+  height: 85vh;
+  border-radius: 25px;
+  background: linear-gradient(
+    34deg,
+    rgba(149, 149, 149, .1) 0%,
+    rgba(60, 60, 60, .1) 29%,
+    rgba(122, 122, 122, .1) 62%,
+    rgba(87, 87, 87, .1) 82%,
+    rgba(0, 0, 0, .1) 100%
+  );
+  box-shadow: inset 15px 20px 20px 20px;
+  border: solid 4px white;
+}
+
+.checkOut__content{
+  width: inherit;
+  height: inherit;
+  border-radius: 25px;
+  background: linear-gradient(
+    34deg,
+    rgba(149, 149, 149, 0.1) 0%,
+    rgba(60, 60, 60, .1) 29%,
+    rgba(122, 122, 122, .1) 62%,
+    rgba(87, 87, 87, .1) 82%,
+    rgba(0, 0, 0, .1) 100%
+  );
+  box-shadow: inset -20px -20px 20px 3px rgba(0, 0, 0, 0.9);
+  border: solid 2px rgb(165, 165, 165);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.checkOut__title{
+  padding: 0px 25px 0px 0px;
+  text-align: center;
+  font-size: 8vw;
+  font-family: 'Josefin Sans', sans-serif;
+  color:  rgba(75, 75, 75, 0.9);
+  text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.9),
+              1px 2px 8px rgba(255, 255, 255, 0.9);
+
+}
+
+@media (min-width: 768px) {
+  .checkOut__title{
+    font-size: 4em;
+  }}

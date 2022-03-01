@@ -1,0 +1,32 @@
+.checkOut__form {
+  width: 80%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkOut__formFrame {
+  padding: 0.2em;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+.checkOut__formLabel{
+    padding-bottom: 1em;
+    font-family: 'Josefin Sans', sans-serif;
+    color:  rgba(75, 75, 75, 0.9);
+    text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.9),
+                1px 2px 8px rgba(255, 255, 255, 0.9);
+}
+
+.checkOut__formError{
+    padding-bottom: 1em;
+    font-size: small;
+    text-align: center;
+    font-family: "Lexend Deca", sans-serif;
+    color:  rgba(255, 0, 0, 0.9);
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.9),
+                1px 2px 8px rgb(255, 255, 255);
+}

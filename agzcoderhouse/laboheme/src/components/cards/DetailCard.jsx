@@ -6,8 +6,7 @@ import { useCart } from "../../context/CartContext";
 import Modals from "../widgets/Modals";
 
 function DetailCard({ product, minus, plus, counter, amount, subtotal }) {
-  const { addProduct, cartLenght } = useCart();
-
+  const { addProduct, cartLength } = useCart();
   const { imageSrc, name, ingredient, price, stock } = product;
 
   const handleClickAdd = () => {
@@ -65,7 +64,7 @@ function DetailCard({ product, minus, plus, counter, amount, subtotal }) {
               <Modals
                 buttonText={"Finalizar"}
                 message="Debes agregar algo al carrito"
-                cartLenght={cartLenght}
+                cartLenght={cartLength}
                 road={"/OrderSumary"}
               />
             </button>

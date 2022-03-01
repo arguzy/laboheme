@@ -1,5 +1,6 @@
 .contact {
   width: 100vw;
+  overflow: hidden;
   background: linear-gradient(
     34deg,
     rgba(149, 149, 149, 1) 0%,
@@ -9,13 +10,21 @@
     rgba(0, 0, 0, 1) 100%
   );
 }
-
+.contact__hero{
+  width: 100vw;
+  overflow: hidden;
+  box-shadow: 0px 20px 20px 5px rgba(0, 0, 0, 0.8);
+}
 .contact__basis {
   width: 100vw;
   display: flex;
   flex-flow: column;
   align-items: center;
   justify-content: center;
+}
+.contact__drops{
+  width: 100vw;
+  overflow: hidden;
 }
 
 @media (min-width: 768px) {
@@ -30,27 +39,168 @@
 
 .contact__titleBox {
   width: 100vw;
-  margin-top: 50px;
+  height: 30vh;  
+  margin-top: 100px;
   display: flex;
   flex-flow: column;
   align-items: center;
-  justify-items: center;
-  padding: 0.5em;
+  justify-content: center;
+  padding: 1.2em;
   border-top: solid white 2px;
   border-bottom: solid white 2px;
-  background: linear-gradient(
-    145deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(71, 71, 71, 1) 50%,
-    rgba(0, 0, 0, 1) 100%
-  );
-  box-shadow: inset 1px 1px 1px 1px rgb(49, 40, 0);
+  background: linear-gradient(90deg, rgba(177,155,88,1) 0%, rgba(233,204,113,1) 20%, rgba(181,158,90,1) 40%, rgba(240,210,116,0.9444152661064426) 60%, rgba(200,175,98,1) 80%, rgba(213,186,102,1) 100%);
+  box-shadow: inset -20px 0px 20px 1px rgba(0, 0, 0, 0.8);
 }
 
 .contact__title {
-  font-family: "Lexend Deca", sans-serif;
-  font-size: 2em;
-  text-align: center;
-  text-shadow: rgba(4, 4, 4, 0.7) -2px -2px 3px,
-    rgba(255, 255, 255, 0.8) 2px 2px 1px;
+    font-size: 2.7em;
+    text-align: center;  
+    font-family: 'Josefin Sans', sans-serif;
+    color:  rgba(255, 255, 255, 0.9);
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8),
+                1px 2px 8px rgba(0, 0, 0, 0.7);
 }
+
+@media (min-width: 768px) {
+  .contact__title {
+  font-size: 3.8em;
+  }
+}
+@media (min-width: 1024px) {
+  .contact__title {
+  font-size: 4.6em;
+  }
+}
+
+
+.contact__location{
+  width: 100vw;
+  overflow: hidden;
+  height: 90vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.contact__locationTitleBox{
+  grid-column: 1/4;
+  grid-row: 1/1;
+  height: grid;
+  width: grid;
+
+}
+
+.contact__map{
+  grid-column: 1/4;
+  grid-row: 2/4;
+  height:grid;
+  width: grid;
+}
+
+.contact__info{
+  grid-column: 1/4;
+  grid-row: 4/5;
+  height: grid;
+  width: grid;
+}
+
+.contact__locationTitle {
+  width: 100vw;
+  height: 20vh;
+  padding: 0.8em;
+  background-color: azure;
+  font-size: 2.2em;
+  text-align: center;  
+  font-family: 'Josefin Sans', sans-serif;
+  color:  rgba(255, 255, 255, 0.9);
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8),
+              1px 2px 8px rgba(0, 0, 0, 0.7);
+  border-top: solid white 2px;
+  border-bottom: solid white 2px;
+  background: linear-gradient(90deg, rgba(177,155,88,1) 0%, rgba(233,204,113,1) 20%, rgba(181,158,90,1) 40%, rgba(240,210,116,0.1) 60%, rgba(200,175,98,1) 80%, rgba(213,186,102,1) 100%);
+  box-shadow: inset -20px 0px 20px 1px rgba(0, 0, 0, 0.8);
+}
+
+.contact__locationSubtitle{
+  padding: 1em;
+  font-size: calc(9px + 1.5vw);
+  text-align: center;  
+  font-family: 'Josefin Sans', sans-serif;
+  color:  rgba(255, 255, 255, 0.9);
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8),
+              1px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.contact__info{
+  width: 85vw;
+  height: fit-content;
+  padding: 1em;
+  border-radius: 30px;
+  border: 3px solid rgb(255, 255, 255);
+  background: rgb(0,0,0);
+  background: linear-gradient(145deg, rgba(0,0,0,1) 0%, rgba(71,71,71,1) 50%, rgba(0,0,0,1) 100%);
+}
+
+.contact__infoList{
+  list-style: none;
+  text-align: center;
+}
+
+.contact__infoItem{
+  padding: .25em;
+  font-size: calc(7px + 1.5vw);
+  font-family: 'Josefin Sans', sans-serif;
+  color:  rgba(75, 75, 75, 0.9);
+  text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.9),
+              1px 2px 8px rgba(255, 255, 255, 0.9);
+}
+
+@media (min-width: 425px) {
+  .contact__locationTitle{
+    padding: 1em;
+}
+}
+
+@media (min-width: 768px) {
+
+  .contact__location{
+    height: 70vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    align-items: center;
+  }
+  
+  .contact__map{
+    grid-column: 1/2;
+    grid-row: 2/5;
+  }
+  
+  .contact__info{
+    grid-column: 2/4;
+    grid-row: 2/5;
+      height: fit-content;
+      width: fit-content;
+  }
+  
+  .contact__locationTitle {
+    padding: .5em;
+    font-size: 3.8em;
+    }
+
+    .contact__locationSubtitle{
+      font-size: calc(9px + 1.5vw);
+    }
+    
+    .contact__infoItem{
+      padding: .25em;
+      font-size: calc(7px + 1vw);
+    }
+  }
+  @media (min-width: 1024px) {
+    .contact__locationTitle {
+      padding: .4em;
+     font-size: 4.6em;
+  }
+  }

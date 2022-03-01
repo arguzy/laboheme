@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
+import { Link } from "react-router-dom";
 import ProductCard from "../../components/cards/ProductCard";
-//import ProductCardCategory from "../../components/cards/ProductCardCategory";
+import { RiArrowGoBackFill } from 'react-icons/ri';
 import Spinner from "../../components/widgets/Spinner";
 import { getFirestore } from "../../firebase";
 import PageNotFound from "../errors/PageNotFound";
@@ -11,8 +12,6 @@ const Category = () => {
   const [errors, setErrors] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const { category } = useParams();
-
-  console.log(category);
 
   useEffect(() => {
     const db = getFirestore();
@@ -57,6 +56,9 @@ const Category = () => {
   }
   return (
       <section className="menu">
+        <div className="menu__comeBack">
+          <Link to='/Store'><RiArrowGoBackFill/>Volver</Link>
+        </div>
       <div className="menu__cover">
         <div className="menu__titleBox">
           <h1 className="menu__title">{banner}</h1>

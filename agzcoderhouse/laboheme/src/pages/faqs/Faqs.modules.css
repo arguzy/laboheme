@@ -1,0 +1,183 @@
+.faqs{
+    background: linear-gradient(90deg, rgba(177,155,88,1) 0%, rgba(233,204,113,1) 20%, rgba(181,158,90,1) 40%, rgba(240,210,116,0.9444152661064426) 60%, rgba(200,175,98,1) 80%, rgba(213,186,102,1) 100%);
+    box-shadow: inset -20px 0px 20px 1px rgba(0, 0, 0, 0.8);
+}
+
+.faqs__wall {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.faqs__wallCenter {
+  grid-column: 1/6;
+  grid-row: 1/5;
+  z-index: 0;
+  box-shadow: inset 0px 0px 10px 20px rgba(0, 0, 0, 0.5),
+    0px 1px 5px 10px rgba(0, 0, 0, 1);
+}
+
+.faqs__grida,
+.faqs__gridb,
+.faqs__gridc,
+.faqs__gridd,
+.faqs__gride,
+.faqs__grida1,
+.faqs__gridb1,
+.faqs__gridc1,
+.faqs__gridd1,
+.faqs__gride1,
+.faqs__grida2,
+.faqs__gridb2,
+.faqs__gridc2,
+.faqs__gridd2,
+.faqs__gride2,
+.faqs__grida3,
+.faqs__gridb3,
+.faqs__gridc3,
+.faqs__gridd3,
+.faqs__gride3 {
+  z-index: 1;
+  height: grid;
+  width: grid;
+  box-shadow: inset 0px 0px 20px 20px rgba(0, 0, 0, 0.5),
+    0px 0px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes wallmove {
+  0% {
+    transform: rotateY(0deg);
+    box-shadow: inset 0px 0px 20px 20px rgba(0, 0, 0, 0.5),
+      0px 0px 5px 5px rgba(0, 0, 0, 0.5);
+  }
+  25% {
+    transform: rotateY(180deg);
+    box-shadow: inset 0px 0px 20px 20px rgba(0, 0, 0, 0.4),
+      0px 0px 5px 5px rgba(0, 0, 0, 0.4);
+  }
+  50% {
+    transform: rotateY(-180deg);
+    box-shadow: inset 0px 0px 20px 20px rgba(0, 0, 0, 0.3),
+      0px 0px 5px 5px rgba(0, 0, 0, 0.3);
+  }
+  75% {
+    transform: rotateY(180deg);
+    box-shadow: inset 0px 0px 20px 20px rgba(0, 0, 0, 0.4),
+      0px 0px 5px 5px rgba(0, 0, 0, 0.4);
+  }
+  100% {
+    transform: rotateY(0deg);
+    box-shadow: inset 0px 0px 20px 20px rgba(0, 0, 0, 0.5),
+      0px 0px 5px 5px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.faqs__grida {
+  grid-row: 1;
+  grid-column: 1/1;
+  animation: wallmove 10s ease 5 3000ms running;
+}
+.faqs__gridb {
+  grid-row: 1;
+  grid-column: 2/2;
+  animation: wallmove 10s ease 5 2500ms running;
+}
+.faqs__gridc {
+  grid-row: 1;
+  grid-column: 3/3;
+  animation: wallmove 10s ease 5 2000ms running;
+}
+.faqs__gridd {
+  grid-row: 1;
+  grid-column: 4/4;
+  animation: wallmove 10s ease 5 1500ms running;
+}
+.faqs__gride {
+  grid-row: 1;
+  grid-column: 5/5;
+  animation: wallmove 10s ease 5 1000ms running;
+}
+.faqs__grida1 {
+  grid-row: 2;
+  grid-column: 1/1;
+  animation: wallmove 10s ease 5 3500ms running;
+}
+.faqs__gridb1 {
+  grid-row: 2;
+  grid-column: 2/2;
+  animation: wallmove 10s ease 5 3000ms running;
+}
+.faqs__gridc1 {
+  grid-row: 2;
+  grid-column: 3/3;
+  animation: wallmove 10s ease 5 2500ms running;
+}
+.faqs__gridd1 {
+  grid-row: 2;
+  grid-column: 4/4;
+  animation: wallmove 10s ease 5 2000ms running;
+}
+.faqs__gride1 {
+  grid-row: 2;
+  grid-column: 5/5;
+  animation: wallmove 10s ease 5 150ms running;
+}
+.faqs__grida2 {
+  grid-row: 3;
+  grid-column: 1/1;
+  animation: wallmove 10s ease 5 3050ms running;
+}
+.faqs__gridb2 {
+  grid-row: 3;
+  grid-column: 2/2;
+  animation: wallmove 10s ease 5 2500ms running;
+}
+.faqs__gridc2 {
+  grid-row: 3;
+  grid-column: 3/3;
+  animation: wallmove 10s ease 5 2000ms running;
+}
+.faqs__gridd2 {
+  grid-row: 3;
+  grid-column: 4/4;
+  animation: wallmove 10s ease 5 1500ms running;
+}
+.faqs__gride2 {
+  grid-row: 3;
+  grid-column: 5/5;
+  animation: wallmove 10s ease 5 1000ms running;
+}
+.faqs__grida3 {
+  grid-row: 4;
+  grid-column: 1/1;
+  animation: wallmove 10s ease 5 2500ms running;
+}
+.faqs__gridb3 {
+  grid-row: 4;
+  grid-column: 2/2;
+  animation: wallmove 10s ease 5 2000ms running;
+}
+.faqs__gridc3 {
+  grid-row: 4;
+  grid-column: 3/3;
+  animation: wallmove 10s ease 5 1500ms running;
+}
+.faqs__gridd3 {
+  grid-row: 4;
+  grid-column: 4/4;
+  animation: wallmove 10s ease 5 1000ms running;
+}
+.faqs__gride3 {
+  grid-row: 4;
+  grid-column: 5/5;
+  animation: wallmove 10s ease 5 500ms running;
+}
+
+.faqs__card {
+  width: 100vw;
+  margin-top: 50px;
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: center;
+}

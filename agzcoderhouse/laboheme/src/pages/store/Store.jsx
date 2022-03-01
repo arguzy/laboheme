@@ -5,21 +5,19 @@ import Spinner from "../../components/widgets/Spinner";
 import PageNotFound from "../errors/PageNotFound";
 import "./Store.modules.css";
 import { useNavigate } from "react-router";
-
-
+import { GiHamburger, GiFrenchFries} from 'react-icons/gi';
+import { TiBeer } from 'react-icons/ti';
 
 const Store = () => {
-
   const { data, errors, isLoading } = useContext(ProductDataContext);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   let repeat;
-  function matching(direction){
+  function matching(direction) {
     repeat = data.some((e) => direction === e.category);
-    if (repeat === true){
-      navigate((`category/${direction}`))
-  }
-
+    if (repeat === true) {
+      navigate(`category/${direction}`);
+    }
   }
 
   if (isLoading) {
@@ -28,13 +26,28 @@ const Store = () => {
     return <PageNotFound />;
   }
 
-
- 
- return (
-   <section className="menu">
-      <button onClick={()=> matching("appetizer")}>Aperitivos</button>
-      <button onClick={()=> matching("burger")}>Hamburguesas</button>
-      <button onClick={()=> matching("beer")}>Cervezas</button>
+  return (
+    <section className="menu">
+      <ul className="menu__list">
+        <li  className="menu__listItem">
+          <span>
+          <GiHamburger/>
+          <button onClick={() => matching("burger")}>Hamburguesas</button>
+          </span>
+        </li>
+        <li  className="menu__listItem">
+          <span>
+          <GiFrenchFries/>
+          <button onClick={() => matching("appetizer")}>Aperitivos</button>
+          </span>
+        </li>
+        <li className="menu__listItem">
+          <span>
+            <TiBeer/>
+          <button onClick={() => matching("beer")}>Cervezas</button>
+          </span>
+        </li>
+      </ul>
       <div className="menu__cover">
         <div className="menu__titleBox">
           <h1 className="menu__title">APERITIVOS</h1>

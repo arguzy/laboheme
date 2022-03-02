@@ -13,7 +13,7 @@
   );
 }
 
-.menu__list{
+.menu__list {
   list-style: none;
   width: 100vw;
   padding: 1em;
@@ -23,21 +23,19 @@
   justify-content: space-around;
 }
 
-.menu__listItem{
-  font-size: 2em ;
-  font-family: 'Lexend Deca', sans-serif;
+.menu__listItem {
+  font-size: 2em;
+  font-family: "Lexend Deca", sans-serif;
   font-weight: 600;
   color: rgb(255, 174, 0);
   text-shadow: rgb(0 0 0 / 70%) 2px 3px 1px;
 }
 
-.menu__listItem button:hover{
-  text-shadow: rgb(0 0 0 / 70%) 2px 3px 1px,
-                white 2px 2px 15px;
+.menu__listItem button:hover {
+  text-shadow: rgb(0 0 0 / 70%) 2px 3px 1px, white 2px 2px 15px;
 }
-.menu__listItem button:active{
-  text-shadow: rgb(0 0 0 / 70%) 2px 3px 1px,
-                white 2px 2px 15px;
+.menu__listItem button:active {
+  text-shadow: rgb(0 0 0 / 70%) 2px 3px 1px, white 2px 2px 15px;
 }
 
 .menu__comeBack {
@@ -47,25 +45,22 @@
   width: fit-content;
   height: fit-content;
   border: 1px solid rgb(255, 174, 0);
-  box-shadow: 2px 3px 1px 1px rgb(0 0 0 / 70%) ;
+  box-shadow: 2px 3px 1px 1px rgb(0 0 0 / 70%);
 }
-.menu__comeBack a{
+.menu__comeBack a {
   text-decoration: none;
-  font-size: 2em ;
-  font-family: 'Lexend Deca', sans-serif;
+  font-size: 2em;
+  font-family: "Lexend Deca", sans-serif;
   font-weight: 600;
   color: rgb(255, 174, 0);
   text-shadow: rgb(0 0 0 / 70%) 2px 3px 1px;
 }
 
-.menu__comeBack:hover{
-  box-shadow: rgb(0 0 0 / 70%) 2px 3px 1px,
-  rgb(255, 174, 0) 1px 1px 15px;
+.menu__comeBack:hover {
+  box-shadow: rgb(0 0 0 / 70%) 2px 3px 1px, rgb(255, 174, 0) 1px 1px 15px;
 }
-.menu__comeBack a:hover{
-  text-shadow: rgb(0 0 0 / 70%) 2px 3px 1px,
-  rgb(255, 174, 0) 1px 1px 5px;
-  
+.menu__comeBack a:hover {
+  text-shadow: rgb(0 0 0 / 70%) 2px 3px 1px, rgb(255, 174, 0) 1px 1px 5px;
 }
 
 .menu__cover {
@@ -367,14 +362,12 @@
 }
 .totals__buttonIconPay {
   padding: 6px 5px;
-
 }
-.totals__buttonTextPay a{
+.totals__buttonTextPay a {
   text-decoration: none;
   color: rgb(255, 255, 255);
-  padding: .5em;
+  padding: 0.5em;
 }
-
 
 .trashAll {
   width: 100%;
@@ -420,23 +413,156 @@ button {
   min-height: 100vh;
   display: flex;
   flex-flow: column;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(0deg, rgba(147,159,175,1) 0%, rgba(8,8,20,1) 100%);
+  background: linear-gradient(
+    0deg,
+    rgba(147, 159, 175, 1) 0%,
+    rgba(8, 8, 20, 1) 100%
+  );
 }
 
+.onGreetings {
+  color: rgb(255, 255, 255);
+  max-width: 85vw;
+}
+.DataRowOnGreetings {
+  padding-left: 25px;
+}
+.greetings__Info {
+  margin-top: 1em 1em 0em 1em;
+  min-height: 30vh;
+  padding: 1em;
+  width: 100vw;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-between;
+}
 
-.checkOut{
+@media (min-width: 768px) {
+  .greetings__Info {
+    flex-flow: wrap;
+  }
+  .tableOnGreetings {
+    margin-left: 0.5em;
+    max-width: 85vw;
+  }
+}
+
+.greetings__client,
+.greetings__totalValue {
+  padding: 1em 0.5em;
+  margin-left: 50px;
+  margin-right: 50px;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: xx-large;
+  text-align: center;
+  color: rgb(230, 230, 230);
+  text-shadow: 1px 2px 3px rgb(0, 0, 0);
+}
+
+.greetings__highlight {
+  font-weight: bolder;
+  color: rgb(255, 145, 0);
+  text-shadow: 1px 2px 3px rgb(255, 132, 0);
+}
+
+.greetings__nextStepsBox {
+  width: 80vw;
+  height: fit-content;
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.greetings__btnBack,
+.greetings__btnChangeOrder,
+.greetings__btnDeleteOrder {
+  margin: 1em;
+  font-family: "Lexend Deca", sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 10px 18px;
+  text-shadow: 1px 1px 1px rgb(255, 255, 255);
+  box-shadow: 0px 10px 14px -7px rgb(119, 119, 119);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+
+.greetings__btnBack a {
+  all: unset;
+}
+
+.greetings__btnBack {
+  background: linear-gradient(
+    180deg,
+    rgb(60, 179, 113) 5%,
+    rgb(30, 137, 76) 100%
+  );
+}
+
+.greetings__btnChangeOrder {
+  background: linear-gradient(180deg, rgb(139, 0, 0) 5%, rgb(92, 10, 10) 100%);
+}
+
+.greetings__btnDeleteOrder {
+  background: linear-gradient(
+    180deg,
+    rgb(105, 105, 105) 5%,
+    rgb(65, 65, 65) 100%
+  );
+}
+
+.greetings__btnBack:hover {
+  background: linear-gradient(
+    180deg,
+    rgb(30, 137, 76) 5%,
+    rgb(60, 179, 113) 100%
+  );
+}
+.greetings__btnBack:active {
+  background: linear-gradient(
+    180deg,
+    rgb(30, 137, 76) 5%,
+    rgb(60, 179, 113) 100%
+  );
+}
+.greetings__btnChangeOrder:hover {
+  background: linear-gradient(180deg, rgb(92, 10, 10) 5%, rgb(139, 0, 0) 100%);
+}
+
+.greetings__btnChangeOrder:active {
+  background: linear-gradient(180deg, rgb(92, 10, 10) 5%, rgb(139, 0, 0) 100%);
+}
+
+.greetings__btnDeleteOrder:hover {
+  background: linear-gradient(
+    180deg,
+    rgb(65, 65, 65) 5%,
+    rgb(105, 105, 105) 100%
+  );
+}
+
+.greetings__btnDeleteOrder:active {
+  background: linear-gradient(
+    180deg,
+    rgb(65, 65, 65) 5%,
+    rgb(105, 105, 105) 100%
+  );
+}
+
+.checkOut {
   background: url("../../../public/Media/formBack.jpg");
   width: 100vw;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-clip: content-box;
-
 }
 
-.checkOut__overley{
+.checkOut__overley {
   padding: 1em;
   width: inherit;
   min-height: 100vh;
@@ -444,36 +570,36 @@ button {
   display: flex;
   flex-flow: column;
   align-items: center;
-  justify-content:flex-start;
+  justify-content: flex-start;
 }
 
-.checkOut__framming{
+.checkOut__framming {
   width: 75vw;
   height: 85vh;
   border-radius: 25px;
   background: linear-gradient(
     34deg,
-    rgba(149, 149, 149, .1) 0%,
-    rgba(60, 60, 60, .1) 29%,
-    rgba(122, 122, 122, .1) 62%,
-    rgba(87, 87, 87, .1) 82%,
-    rgba(0, 0, 0, .1) 100%
+    rgba(149, 149, 149, 0.1) 0%,
+    rgba(60, 60, 60, 0.1) 29%,
+    rgba(122, 122, 122, 0.1) 62%,
+    rgba(87, 87, 87, 0.1) 82%,
+    rgba(0, 0, 0, 0.1) 100%
   );
   box-shadow: inset 15px 20px 20px 20px;
   border: solid 4px white;
 }
 
-.checkOut__content{
+.checkOut__content {
   width: inherit;
   height: inherit;
   border-radius: 25px;
   background: linear-gradient(
     34deg,
     rgba(149, 149, 149, 0.1) 0%,
-    rgba(60, 60, 60, .1) 29%,
-    rgba(122, 122, 122, .1) 62%,
-    rgba(87, 87, 87, .1) 82%,
-    rgba(0, 0, 0, .1) 100%
+    rgba(60, 60, 60, 0.1) 29%,
+    rgba(122, 122, 122, 0.1) 62%,
+    rgba(87, 87, 87, 0.1) 82%,
+    rgba(0, 0, 0, 0.1) 100%
   );
   box-shadow: inset -20px -20px 20px 3px rgba(0, 0, 0, 0.9);
   border: solid 2px rgb(165, 165, 165);
@@ -483,18 +609,18 @@ button {
   justify-content: space-around;
 }
 
-.checkOut__title{
+.checkOut__title {
   padding: 0px 25px 0px 0px;
   text-align: center;
   font-size: 8vw;
-  font-family: 'Josefin Sans', sans-serif;
-  color:  rgba(75, 75, 75, 0.9);
+  font-family: "Josefin Sans", sans-serif;
+  color: rgba(75, 75, 75, 0.9);
   text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.9),
-              1px 2px 8px rgba(255, 255, 255, 0.9);
-
+    1px 2px 8px rgba(255, 255, 255, 0.9);
 }
 
 @media (min-width: 768px) {
-  .checkOut__title{
+  .checkOut__title {
     font-size: 4em;
-  }}
+  }
+}

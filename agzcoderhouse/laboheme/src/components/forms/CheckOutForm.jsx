@@ -67,6 +67,7 @@ const CheckOutForm = () => {
           onChange={handleChange}
           value={form.name}
           required
+          className="checkOut__formInput"
         />
         {errors.name && <p className="checkOut__formError">{errors.name}</p>}
 
@@ -80,6 +81,7 @@ const CheckOutForm = () => {
           onChange={handleChange}
           value={form.email}
           required
+          className="checkOut__formInput"
         />
         {errors.email && <p className="checkOut__formError">{errors.email}</p>}
 
@@ -93,6 +95,7 @@ const CheckOutForm = () => {
           onChange={handleChange}
           value={form.phone}
           required
+          className="checkOut__formInput"
         />
         {errors.phone && <p className="checkOut__formError">{errors.phone}</p>}
 

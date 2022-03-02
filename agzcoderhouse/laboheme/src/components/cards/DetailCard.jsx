@@ -6,7 +6,7 @@ import { useCart } from "../../context/CartContext";
 import Modals from "../widgets/Modals";
 
 function DetailCard({ product, minus, plus, counter, amount, subtotal }) {
-  const { addProduct, cartLength } = useCart();
+  const { addProduct, cart } = useCart();
   const { imageSrc, name, ingredient, price, stock } = product;
 
   const handleClickAdd = () => {
@@ -30,15 +30,12 @@ function DetailCard({ product, minus, plus, counter, amount, subtotal }) {
               </Link>
             </button>
           </div>
-
           <div className="detailCard__ingredientBox">
             <p className="detailCard__ingredient">{ingredient}</p>
           </div>
-          {stock === counter && (
-            <div className="detailCard__fullStockTaked">
-              <p>No quedan más unidades</p>
-            </div>
-          )}
+          <div className="detailCard__fullStockTaked">
+            {stock === counter && <p>No quedan más unidades</p>}
+          </div>
           <div className="detailCard__amountBox">
             <p
               className="detailCard__price"
@@ -64,7 +61,7 @@ function DetailCard({ product, minus, plus, counter, amount, subtotal }) {
               <Modals
                 buttonText={"Finalizar"}
                 message="Debes agregar algo al carrito"
-                cartLenght={cartLength}
+                cart={cart}
                 road={"/OrderSumary"}
               />
             </button>

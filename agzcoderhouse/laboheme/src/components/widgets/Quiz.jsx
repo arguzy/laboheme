@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { GiBackForth } from 'react-icons/gi';
+import { GiBackForth } from "react-icons/gi";
 import "./Widgets.css";
 
 const Quiz = ({ backgroundCard, question, answer }) => {
@@ -18,8 +18,10 @@ const Quiz = ({ backgroundCard, question, answer }) => {
   return (
     <div className={card} onClick={handleClickOnCard}>
       <div className="quiz__overley">
-          <div className="quiz__signal"><GiBackForth/></div>
-        
+        <div className="quiz__signal">
+          <GiBackForth />
+        </div>
+
         <div className={turnCard ? "quiz__backgroundOff" : backgroundCard}>
           <div className="quiz__content">
             <h1

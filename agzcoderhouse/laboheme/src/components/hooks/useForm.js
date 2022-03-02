@@ -54,6 +54,7 @@ export const useForm = (initialForm, validateForm) => {
     }
   };
 
+  
 
 
   return {
@@ -64,5 +65,6 @@ export const useForm = (initialForm, validateForm) => {
     handleChange,
     handleBlur,
     handleSubmit,
+    handleChange,
   };
 };

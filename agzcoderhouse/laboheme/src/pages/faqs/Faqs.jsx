@@ -8,7 +8,7 @@ const Faqs = () => {
     <section className='faqs'>
       <article className='faqs__wall'>
         <div className='faqs__wallCenter'>
-        <Hero backgrundHero="HeroFaqs" title="hola" text="lorem" />
+        <Hero backgrundHero="HeroFaqs" title="Give It Away" text="What I've got you've got to get it put it in you" />
         </div>
         <div className='faqs__grida'></div>
         <div className='faqs__gridb'></div>

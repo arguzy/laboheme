@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./components/navigation/Navbar";
+import Footer from "./components/navigation/Footer";
 import Home from "./pages/home/Home";
 import Contact from "./pages/contact/Contact";
 import Faqs from "./pages/faqs/Faqs";
@@ -14,7 +15,7 @@ import { ProductDataProvider } from "./context/ProductDataContext";
 import { CartProvider } from "./context/CartContext";
 import Greeting from "./pages/store/Greeting";
 import "./App.css"
-//mport Footer from './components/footer/Footer';
+
 
 function App() {
   return (
@@ -41,6 +42,9 @@ function App() {
               </Route>
               <Route path="*" element={<PageNotFound />} />
             </Routes>
+              <footer>
+                <Footer/>
+              </footer>
           </BrowserRouter>
         </CartProvider>
       </ProductDataProvider>

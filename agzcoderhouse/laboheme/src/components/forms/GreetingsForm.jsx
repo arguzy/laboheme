@@ -37,7 +37,7 @@ const validationsForm = (form) => {
   return errors;
 };
 
-const CheckOutForm = () => {
+const GreetingsForm = ({orderId}) => {
   const {
     form,
     errors,
@@ -45,7 +45,8 @@ const CheckOutForm = () => {
     faild,
     handleChange,
     handleBlur,
-    handleSubmit,
+    handleUpdate,
+
   } = useForm(initialForm, validationsForm);
 
   if (loading) {
@@ -56,7 +57,7 @@ const CheckOutForm = () => {
 
   return (
     <div className="checkOut__form">
-      <form onSubmit={handleSubmit} className="checkOut__formFrame">
+      <form onSubmit={(e) => handleUpdate(e , orderId)} className="checkOut__formFrame">
         <label htmlFor="name" className="checkOut__formLabel">NOMBRE y APELLIDO</label>
         <input
           type="text"
@@ -67,6 +68,7 @@ const CheckOutForm = () => {
           onChange={handleChange}
           value={form.name}
           required
+          className="checkOut__formInput"
         />
         {errors.name && <p className="checkOut__formError">{errors.name}</p>}
 
@@ -80,6 +82,7 @@ const CheckOutForm = () => {
           onChange={handleChange}
           value={form.email}
           required
+          className="checkOut__formInput"
         />
         {errors.email && <p className="checkOut__formError">{errors.email}</p>}
 
@@ -93,6 +96,7 @@ const CheckOutForm = () => {
           onChange={handleChange}
           value={form.phone}
           required
+          className="checkOut__formInput"
         />
         {errors.phone && <p className="checkOut__formError">{errors.phone}</p>}
 
@@ -102,4 +106,4 @@ const CheckOutForm = () => {
   );
 };
 
-export default CheckOutForm;
+export default GreetingsForm;

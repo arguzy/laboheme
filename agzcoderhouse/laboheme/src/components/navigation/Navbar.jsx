@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import {FaBars} from 'react-icons/fa'
 import CartView from '../widgets/CartView';
-import './NavBar.css';
+import './Navigation.css';
 
     const Navbar = () => {
         
@@ -21,7 +21,7 @@ import './NavBar.css';
                 <ul className={show ? 'nav__menu nav__menuVisible' : 'nav__menu'} >
                     <li className='nav__menuItem'><Link to='./' className='nav__menuLink' onClick={ToggleMenu}>Inicio</Link></li>
                     <li className='nav__menuItem'><Link to='./Contact' className='nav__menuLink' onClick={ToggleMenu}>Quiénes Somos</Link></li>
-                    <li className='nav__menuItem'><Link to='./Store' className='nav__menuLink' onClick={ToggleMenu}>Menú y Delivery</Link></li>
+                    <li className='nav__menuItem'><Link to='./Store' className='nav__menuLink' onClick={ToggleMenu}>Menú y Take Away</Link></li>
                     <li className='nav__menuItem'><Link to='./Faqs' className='nav__menuLink' onClick={ToggleMenu}>Preguntas Frecuentes</Link></li>
                     <span className='nav__menuIndicator'></span>
                 </ul>

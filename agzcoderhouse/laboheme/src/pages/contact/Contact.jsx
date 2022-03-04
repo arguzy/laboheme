@@ -15,7 +15,7 @@ const Contact = () => {
   return (
     <section className="contact">
       <article className="contact__hero">
-        <Hero backgrundHero="HeroContact" title="hola" text="lorem" />
+        <Hero backgrundHero="HeroContact" title="Welcome to the jungle" text="Watch it bring you to your sha-n-n-n-n-n-n-n-n knees, knees" />
       </article>
       <article className="contact__drops">
         <span className="contact__titleBox">

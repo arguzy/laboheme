@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
+import swal from "sweetalert";
 import { useCart } from "../../context/CartContext";
 import { getFirestore } from "../../firebase";
 
@@ -54,8 +55,45 @@ export const useForm = (initialForm, validateForm) => {
     }
   };
 
-  
+  const handleUpdate = (e , orderId) => {
+    e.preventDefault();
 
+    setErrors(validateForm(form));
+
+    const ORDERUPDATE = {
+      buyer: { form }
+    };
+
+    if (Object.keys(errors).length === 0) {
+      const db = getFirestore();
+      const collection = db.collection("ORDERCONFIRMED");
+      setLoading(true);
+      collection.doc(orderId)
+        .update(ORDERUPDATE)
+        .then((res) => {
+          console.log("Datos Actualizados", res);
+          UpdateOk();
+        })
+        .catch((err) => setFaild(err))
+        .finally(setLoading(false));
+    } else {
+      UpdateFail();
+    }
+  };
+  
+  function UpdateOk(){
+    swal(`Han sido actualizados los datos!`, {
+      buttons: false,
+      timer: 1500,
+    });
+  }
+
+  function UpdateFail(){
+    swal(`No se ha enviado revisa los datos ingresados`, {
+      buttons: false,
+      timer: 3000,
+    });
+  }
 
   return {
     form,
@@ -65,6 +103,6 @@ export const useForm = (initialForm, validateForm) => {
     handleChange,
     handleBlur,
     handleSubmit,
-    handleChange,
+    handleUpdate
   };
 };

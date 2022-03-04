@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
+import swal from "sweetalert";
+import ModalForm from "../../components/widgets/ModalForm";
 import Spinner from "../../components/widgets/Spinner";
 import { getFirestore } from "../../firebase";
 import PageNotFound from "../errors/PageNotFound";
@@ -11,6 +13,10 @@ const Greeting = () => {
   const [info, setInfo] = useState({});
   const [errors, setErrors] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+
+
+
+
 
   useEffect(() => {
     setTimeout(() => {
@@ -26,6 +32,39 @@ const Greeting = () => {
   }, [orderId]);
 
   //.then((res) =>{ if(!res.ok) console.log("La orden fue procesada pero no pudo ser expuesta, porque firestore demora demasiado")})
+
+
+  const handleClickDeleteOrder = () =>{
+    const db = getFirestore();
+    setIsLoading(true);
+    db.collection("ORDERCONFIRMED")
+      .doc(orderId)
+      .delete()
+      .then((res) => {
+        console.log("Datos Eliminados", res);
+        deleteOk();
+      })
+      .catch((err) => {
+        setErrors(err);
+        deleteFail();
+      })
+      .finally(() => setIsLoading(false));
+
+  }
+
+  function deleteOk(){
+    swal(`La orden ha sido eliminada`, {
+      buttons: false,
+      timer: 1500,
+    });
+  }
+
+  function deleteFail(){
+    swal(`No has logrado eliminar la orden, intentalo nuevamente`, {
+      buttons: false,
+      timer: 3000,
+    });
+  }
 
 
   if (isLoading) {
@@ -58,10 +97,13 @@ const Greeting = () => {
               <Link to={"/"}>VOLVER</Link>
             </button>
             <button className="greetings__btnChangeOrder">
-              CAMBIAR DATOS
+              <ModalForm
+                buttonText={"ACTUALIZAR DATOS"}
+                orderId={orderId}
+              />
             </button>
-            <button className="greetings__btnDeleteOrder">
-              ELIMINAR ORDER
+            <button className="greetings__btnDeleteOrder" onClick={handleClickDeleteOrder}>
+            <Link to={"/"}>CANCELAR ORDEN</Link>
             </button>
           </div>
         </div>

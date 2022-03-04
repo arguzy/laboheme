@@ -1,6 +1,7 @@
 .menu {
   overflow: hidden;
   bottom: 0%;
+  padding-bottom: 1em;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -21,6 +22,7 @@
   flex-flow: wrap;
   align-items: center;
   justify-content: space-around;
+
 }
 
 .menu__listItem {
@@ -491,7 +493,8 @@ button {
   align-items: center;
 }
 
-.greetings__btnBack a {
+.greetings__btnBack a,
+.greetings__btnDeleteOrder a {
   all: unset;
 }
 

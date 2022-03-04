@@ -1,0 +1,340 @@
+.nav {
+  width: 100%;
+  box-shadow: inset -15px 15px 14px 0px rgba(174, 174, 174, 0.2),
+    2px -5px 0px 20px black;
+  background: linear-gradient(
+    45deg,
+    rgb(21, 21, 21) 0%,
+    rgba(116, 116, 116, 0.8) 50%,
+    rgb(34, 34, 34) 100%
+  );
+  border-bottom: solid 2px;
+  height: 15vw;
+  max-height: 3.5em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav__motley {
+  z-index: 9;
+  display: flex;
+  align-items: center;
+}
+
+.nav__logo {
+  text-decoration: none;
+  font-family: "Josefin Sans", sans-serif;
+  color: rgb(255, 174, 0);
+  text-shadow: rgb(0 0 0 / 70%) 2px 3px 1px;
+  font-size: 1.6em;
+  padding: 0.3em;
+}
+
+.nav__shopIcon {
+  text-decoration: none;
+  color: rgb(255, 174, 0);
+  text-shadow: rgb(0 0 0 / 70%) 2px 3px 1px;
+  font-size: 1em;
+  padding: 0.3em;
+}
+.nav__shop {
+  display: flex;
+}
+.nav__shopConunt {
+  margin-top: -10px;
+  margin-left: 20px;
+  position: absolute;
+  padding: 0.2em;
+  background: rgba(245, 245, 245, 0.6);
+  font-family: "Josefin Sans", sans-serif;
+  color: rgb(67, 67, 67);
+  text-shadow: rgba(169, 169, 169, 0.7) 2px 1px 1px;
+  font-size: 0.7em;
+  border-radius: 15px;
+}
+
+.nav__menu {
+  list-style: none;
+  display: flex;
+}
+
+.nav__menuItem {
+  width: max-content;
+  height: max-content;
+}
+
+.nav__menuLink {
+  z-index: 9;
+  margin: 0 7px;
+  padding: 0em 0.1em 0.5em 0.5em;
+  position: relative;
+  text-decoration: none;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 600;
+  color: rgb(255, 174, 0);
+  text-shadow: rgb(0 0 0 / 70%) 2px 3px 1px;
+  transition: 0.4s;
+}
+
+.nav__menuLink::before {
+  text-align: center;
+  height: 5px;
+  width: 5px;
+  left: 50%;
+  bottom: -8px;
+  opacity: 0;
+  content: "";
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 45px;
+  transition: 0.4s;
+}
+
+.nav__menuLink:not(.is-active):hover::before {
+  opacity: 1;
+  bottom: -4px;
+}
+
+.nav__menuLink:not(.is-active):hover {
+  color: rgb(255, 255, 255);
+  font-weight: bolder;
+}
+
+.nav__menuIndicator {
+  transition: 0.5s;
+  border-radius: 8px 8px 0 0;
+}
+
+.nav__btnToggle {
+  margin: 5px;
+  background: none;
+  border: none;
+  padding: 0.3em;
+  font-size: 1.5em;
+  color: rgb(255, 174, 0);
+  text-shadow: rgb(0 0 0 / 70%) 2px 3px 1px;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    justify-content: space-between;
+  }
+
+  .nav__logo {
+    font-size: 1.5em;
+    padding: 0.2em;
+  }
+
+  .nav__menu {
+    width: 100%;
+    flex-flow: column;
+    align-items: center;
+    left: -100%;
+    top: -10%;
+    margin-top: 3.5em;
+    padding: 5em 0;
+    height: 110%;
+    transition: left 0.4s;
+    position: fixed;
+    overflow-y: auto;
+  }
+
+  .nav__menuItem {
+    padding: 1em;
+  }
+
+  .nav__menuLink {
+    color: rgb(255, 255, 255);
+  }
+  .nav__menuLink:not(.is-active):hover {
+    color: rgb(255, 179, 39);
+  }
+  .nav__menuLink:not(.is-active):hover::before {
+    opacity: 0;
+  }
+  .nav__btnToggle {
+    margin-right: 40px;
+    text-shadow: rgba(0, 0, 0, 0.7) 2px 3px 1px;
+    z-index: 9;
+    display: block;
+  }
+  .nav__menuVisible {
+    background-color: hsla(0, 0%, 0%, 0.85);
+    z-index: 8;
+    left: 0;
+  }
+}
+
+
+.footContent {
+
+    width: 100vw;
+    padding-top: 2em;
+    background: linear-gradient(
+      45deg,
+      rgb(21, 21, 21) 0%,
+      rgba(116, 116, 116, 0.8) 50%,
+      rgb(34, 34, 34) 100%
+    );
+    box-shadow: inset 0px 0px 20px 8px black;
+    border-top: 2px solid rgb(255, 255, 255);
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.sitemap {
+
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.sitemap__title {
+  text-align: center;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1em;
+  text-shadow: rgba(128, 128, 128, 0.748) 2px -2px 2px;
+  color: rgb(255, 255, 255);
+}
+
+.sitemap__ul {
+  list-style: none;
+}
+
+.sitemap__li {
+  padding: 0.1em 0em 0em 0em;
+}
+.sitemap__li :hover {
+  color: rgb(247, 161, 0);
+}
+.sitemap__li :active {
+  color: rgb(247, 161, 0);
+}
+
+.sitemap__links {
+  text-decoration: none;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 0.5em;
+  text-shadow: rgba(128, 128, 128, 0.748) -2px 2px 2px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+.address{
+    padding-bottom: 1em;
+}
+.address__title {
+    text-align: center;
+    padding-top: 1em;
+  font-family: "Josefin Sans", sans-serif;
+font-style: normal;
+font-size: 1em;
+  text-shadow: rgba(128, 128, 128, 0.748);
+  color: rgb(255, 255, 255);
+}
+
+.address__ul {
+  list-style: none;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.address__li {
+  text-decoration: none;
+  padding-top: 0.5em;
+}
+
+
+.address__subtitle {
+font-style: normal;
+  text-decoration: none;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 200;
+  font-size: 0.8em;
+  text-shadow: rgba(128, 128, 128, 0.748) -2px 2px 2px;
+  color: rgb(255, 255, 255);
+}
+
+.address__par {
+    padding-top: .2em;
+  text-align: center;
+  font-style: normal;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 0.9em;
+  text-shadow: rgba(128, 128, 128, 0.748) -2px 2px 2px;
+  color: rgb(255, 255, 255);
+}
+
+.copyright {
+padding-top: 3px;
+padding-bottom: 2px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+
+  box-shadow: inset 0px 20px 20px 8px black;
+  background: rgb(181,181,181);
+  background: linear-gradient(0deg, rgba(181,181,181,1) 0%, rgba(141,141,141,1) 20%, rgba(71,71,71,1) 85%, rgba(0,0,0,1) 100%);
+}
+
+.copyright__text {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 0.6em;
+  font-weight: normal;
+  font-style: normal;
+  text-shadow: rgba(128, 128, 128, 0.748) 2px 2px 2px;
+  color: rgb(255, 255, 255);
+}
+@media (min-width: 768px) {
+
+    .footContent {
+        padding-top: .5em;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        align-items: center;
+
+    }
+    .sitemap{
+        padding: 0;
+        grid-column:1/1 ;
+        grid-row: 1/1 ;
+        justify-self: center;
+    }
+
+.address{
+    padding: 0;
+    grid-column:3/3 ;
+    grid-row: 1/1 ;
+    justify-self: center;
+}
+
+
+.sitemap__title {
+    font-size: 1.3em;
+}
+.sitemap__links {
+    font-size: 1em;
+}
+.address__title {
+    font-size: 1em;
+}
+.address__subtitle {
+    padding: .3em;
+    font-size: 1em;
+}
+.address__li {
+    padding: 0;
+}
+.address__par {
+    padding: .1em;
+    font-size: 1em;
+}
+
+.copyright{padding: .5em;}
+  .copyright__text {
+    font-size: 1em;
+  }
+}

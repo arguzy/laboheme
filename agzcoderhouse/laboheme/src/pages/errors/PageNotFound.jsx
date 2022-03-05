@@ -2,6 +2,7 @@ import React from "react";
 import { BsSkipBackwardCircle } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import "./NotFound.modules.css";
+//Componente meramente presentacional con un enlace que redirecciona al la home
 const PageNotFound = () => {
   return (
     <section className="errorNotFound">

@@ -33,6 +33,25 @@
 	padding: 5px 10px;
 }
 
+@media (min-width: 768px) {
+
+	.counterBox{
+		margin-top: 5px;
+		width: 150px;
+	}
+	.counterBox__button {
+		font-size: 16px;
+		padding: 10px 10px;	
+	}
+	.counterBox__num{
+		font-size: 18px;
+		font-family: 'Josefin Sans', sans-serif;
+		padding: 10px 10px;
+	}
+}
+
+
+
 .cardProducts__DetailBtn {
 	margin: 0px 5px;
 	padding: 0px 0px;

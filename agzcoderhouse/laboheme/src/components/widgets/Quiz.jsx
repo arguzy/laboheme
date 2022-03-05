@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { GiBackForth } from "react-icons/gi";
 import "./Widgets.css";
+// Tanto la Section como este componente, se hicieron con la idea que salió de https://codepen.io/noahraskin/pen/JjrydbL y de acá https://codepen.io/darkwing/pen/DrNEzy
+//No tiene nada dificil, recibe por props el contenido a poner dentro de la pseudo card que se armo. Y luego, se usa un estado con un condicional, para la asignación del css.
 
 const Quiz = ({ backgroundCard, question, answer }) => {
   const [turnCard, setTurnCard] = useState(false);

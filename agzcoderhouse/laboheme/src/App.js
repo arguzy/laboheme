@@ -36,7 +36,7 @@ function App() {
                   <Route path="products/:ident" element={<ProductDetail />} />
                   <Route path="category/:category" element={<Category />} />
                 </Route>
-                <Route path="ordersumary" element={<OrderSummary />} />
+                <Route path="ordersummary" element={<OrderSummary />} />
                 <Route path="checkOut" element={<CheckOut />} />
                 <Route path="greeting/:orderId" element={<Greeting />} />
               </Route>

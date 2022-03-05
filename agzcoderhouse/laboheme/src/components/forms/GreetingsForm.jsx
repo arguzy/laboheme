@@ -2,13 +2,16 @@ import React from "react";
 import PageNotFound from "../../pages/errors/PageNotFound";
 import { useForm } from "../hooks/useForm";
 import Spinner from "../widgets/Spinner";
-import "./CheckOutForm.css"
+import "./CheckOutForm.css";
 
+//componente con el formulario para trabajar con el Update, se trae por props las funciones del custom hook UseForm.
+// Lo cierto de este componente, es que es totalmente evitable, aunque al presivir por props el orderId con la id que se encuentra alojada en firestore, y a la que vamos a estar haciéndole modificaciones, preferí mantener para que sea más fácil de entender que pasa en este componente (no la considero buena práctica, pero lo hago a los fines de hacer entender el código).
 const initialForm = {
   name: "",
   email: "",
   phone: "",
 };
+//se construye el objeto con los valores a ser captados en el formulario
 
 const validationsForm = (form) => {
   let errors = {};
@@ -33,11 +36,12 @@ const validationsForm = (form) => {
   } else if (!errorPhone.test(form.phone.trim())) {
     errors.phone = "Revisa el número ejemplo, algo esta mal";
   }
+  //se introduce todas las validaciones de campos para el manejo de errores
 
   return errors;
 };
 
-const GreetingsForm = ({orderId}) => {
+const GreetingsForm = ({ orderId }) => {
   const {
     form,
     errors,
@@ -46,19 +50,25 @@ const GreetingsForm = ({orderId}) => {
     handleChange,
     handleBlur,
     handleUpdate,
-
   } = useForm(initialForm, validationsForm);
+  //se traen todo lo que voy a usar del useForm
 
   if (loading) {
     return <Spinner />;
   } else if (faild) {
     return <PageNotFound />;
   }
+  //como el use form va a hacer un Update, se incorpora el manejo de la espera de respuesta y el error ante la falla de la promise, en todo caso.
 
   return (
     <div className="checkOut__form">
-      <form onSubmit={(e) => handleUpdate(e , orderId)} className="checkOut__formFrame">
-        <label htmlFor="name" className="checkOut__formLabel">NOMBRE y APELLIDO</label>
+      <form
+        onSubmit={(e) => handleUpdate(e, orderId)}
+        className="checkOut__formFrame"
+      >
+        <label htmlFor="name" className="checkOut__formLabel">
+          NOMBRE y APELLIDO
+        </label>
         <input
           type="text"
           id="name"
@@ -72,7 +82,9 @@ const GreetingsForm = ({orderId}) => {
         />
         {errors.name && <p className="checkOut__formError">{errors.name}</p>}
 
-        <label htmlFor="email" className="checkOut__formLabel">EMAIL</label>
+        <label htmlFor="email" className="checkOut__formLabel">
+          EMAIL
+        </label>
         <input
           type="email"
           id="email"
@@ -86,7 +98,9 @@ const GreetingsForm = ({orderId}) => {
         />
         {errors.email && <p className="checkOut__formError">{errors.email}</p>}
 
-        <label htmlFor="phone" className="checkOut__formLabel">TELÉFONO</label>
+        <label htmlFor="phone" className="checkOut__formLabel">
+          TELÉFONO
+        </label>
         <input
           type="number"
           id="phone"
@@ -100,7 +114,7 @@ const GreetingsForm = ({orderId}) => {
         />
         {errors.phone && <p className="checkOut__formError">{errors.phone}</p>}
 
-        <input type="submit" value="Enviar" className="checkOut__formButton"/>
+        <input type="submit" value="Enviar" className="checkOut__formButton" />
       </form>
     </div>
   );

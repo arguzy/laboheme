@@ -1,35 +1,41 @@
-import React from 'react';
-import { BsCartPlusFill } from 'react-icons/bs';
-import { useNavigate } from 'react-router-dom';
-import './Card.modules.css';
+import React from "react";
+import { BsCartPlusFill } from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
+import "./Card.modules.css";
 
-function ProductCard ({ident, imageSrc , name, price}) {
+//Componente con estructura presentacional, lo más complejo que tiene es el uso del useNavigate para enlazar y renderizar la página que lleva al detalle de los productos.
+function ProductCard({ ident, imageSrc, name, price }) {
+  const navigate = useNavigate();
 
-    const navigate = useNavigate();
-    
-    return (
-    
-        <div className="cardProducts">
-            <div className="cardProducts__ImageBox">
-                <img className="cardProducts__Image" src={imageSrc} alt={name} />
-            </div>
-            <div className="cardProducts__infoBox">
-                <div>
-                    <div className="cardProducts__titleBox">
-                        <h2 className="cardProducts__title">{name}</h2>
-                    </div>  
-                </div>
-
-                <div className="cardProducts__toBuy">
-                    <p className="cardProducts__price">Precio:$ {price}</p>
-                    <button className="cardProducts__DetailBtn" onClick={() => navigate (`/Store/products/${ident}`, {replace: true})}>
-                        <span className='cardProducts__DetailBtnIcon'><BsCartPlusFill/></span>
-                        <span className="cardProducts__DetailBtnText"> Agregar</span>
-                    </button>
-                </div>
-            </div>
+  return (
+    <div className="cardProducts">
+      <div className="cardProducts__ImageBox">
+        <img className="cardProducts__Image" src={imageSrc} alt={name} />
+      </div>
+      <div className="cardProducts__infoBox">
+        <div>
+          <div className="cardProducts__titleBox">
+            <h2 className="cardProducts__title">{name}</h2>
+          </div>
         </div>
-    )
+
+        <div className="cardProducts__toBuy">
+          <p className="cardProducts__price">Precio:$ {price}</p>
+          <button
+            className="cardProducts__DetailBtn"
+            onClick={() =>
+              navigate(`/Store/products/${ident}`, { replace: true })
+            }
+          >
+            <span className="cardProducts__DetailBtnIcon">
+              <BsCartPlusFill />
+            </span>
+            <span className="cardProducts__DetailBtnText"> Agregar</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  );
 }
 
-export default ProductCard
+export default ProductCard;

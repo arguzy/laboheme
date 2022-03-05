@@ -87,23 +87,20 @@
 .contact__locationTitleBox{
   grid-column: 1/4;
   grid-row: 1/1;
-  height: grid;
-  width: grid;
+
 
 }
 
 .contact__map{
   grid-column: 1/4;
   grid-row: 2/4;
-  height:grid;
-  width: grid;
+
 }
 
 .contact__info{
   grid-column: 1/4;
   grid-row: 4/5;
-  height: grid;
-  width: grid;
+
 }
 
 .contact__locationTitle {

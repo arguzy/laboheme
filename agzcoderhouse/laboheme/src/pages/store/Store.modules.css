@@ -559,10 +559,10 @@ button {
 .checkOut {
   background: url("../../../public/Media/formBack.jpg");
   width: 100vw;
-  background-size: cover;
+  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-clip: content-box;
+  background-size: cover;
 }
 
 .checkOut__overley {
@@ -577,8 +577,9 @@ button {
 }
 
 .checkOut__framming {
-  width: 75vw;
-  height: 85vh;
+  margin-top: 5vw;
+  width: 260px;
+  height: 550px;
   border-radius: 25px;
   background: linear-gradient(
     34deg,
@@ -590,6 +591,14 @@ button {
   );
   box-shadow: inset 15px 20px 20px 20px;
   border: solid 4px white;
+}
+.checkOut__line{
+  height: 50px;
+  width: 100%;
+  border-top: solid 3px rgb(255, 255, 255);
+  border-bottom: solid 3px rgb(255, 255, 255);
+  background: linear-gradient(90deg, rgba(177,155,88,1) 0%, rgba(233,204,113,1) 20%, rgba(181,158,90,1) 40%, rgba(240,210,116,0.9444152661064426) 60%, rgba(200,175,98,1) 80%, rgba(213,186,102,1) 100%);
+  box-shadow: inset 0px 0px 20px 2px black;
 }
 
 .checkOut__content {
@@ -615,7 +624,7 @@ button {
 .checkOut__title {
   padding: 0px 25px 0px 0px;
   text-align: center;
-  font-size: 8vw;
+  font-size: 2em;
   font-family: "Josefin Sans", sans-serif;
   color: rgba(75, 75, 75, 0.9);
   text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.9),
@@ -624,6 +633,6 @@ button {
 
 @media (min-width: 768px) {
   .checkOut__title {
-    font-size: 4em;
+    font-size: 2em;
   }
 }

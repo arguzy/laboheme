@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Navigation.css";
-
+//El footer contiene un sitemap para que el usuario pueda ir y volver a cualquier lugar del sitio en cualquier momento
+// y tiene datos basicos de contacto, junto con el copyright. Falta un Newsletter y un apartado para redes sociales
+// Lo único por fuera de un lenguaje html normal, es la etiqueta link, que enlasa y renderiza los otros componentes del sitio
 const Footer = () => {
   return (
     <>

@@ -1,23 +1,22 @@
-
-
 import React from "react";
 import { useCart } from "../../context/CartContext";
-import "./Store.modules.css";
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { BiTrash } from "react-icons/bi";
 import { MdOutlinePayments } from "react-icons/md";
 import { RiArrowGoBackFill } from "react-icons/ri";
-import { Link } from "react-router-dom";
-import { useNavigate } from 'react-router-dom';
-
-const OrderSumary = () => {
+import "./Store.modules.css";
+// este componente es presentación en parte y tiene un IF como para condicionar la eliminación de productos, hasta que no quede uno solo (como el state cart no muta inmediatamente se usa <= 1 que para el caso es 0)
+// El error que señala la consola del browser es aceptado. Es por una cuestión de css. Me gustó y me sirve usar los DataLabel de las listas. Tarde en entenderlo cuando lo vi, pero me funciona y queda bien, no impde funcionalidades. La idea salió de https://codepen.io/AllThingsSmitty/pen/MyqmdM (en el curso de html y css no se vieron listas, por lo que tuve que mirar cómo se usan bien)
+const OrderSummary = () => {
   const { cart, eraseProduct, total, eraseAllProduct } = useCart();
   const navigate = useNavigate();
-  
-  function handleClickDeleteItem(itemToDelete){
-    eraseProduct(itemToDelete)  
-    if(cart.length <= 1){ navigate("/Store")}
-    
-    
+
+  function handleClickDeleteItem(itemToDelete) {
+    eraseProduct(itemToDelete);
+    if (cart.length <= 1) {
+      navigate("/Store");
+    }
   }
 
   return (
@@ -39,8 +38,10 @@ const OrderSumary = () => {
             <span className="totals__buttonIconPay">
               <MdOutlinePayments />
             </span>
-            <span >
-              <button className="totals__buttonTextPay"><Link to="/checkOut">Pagar</Link></button>
+            <span>
+              <button className="totals__buttonTextPay">
+                <Link to="/checkOut">Pagar</Link>
+              </button>
             </span>
           </div>
         </div>
@@ -101,7 +102,9 @@ const OrderSumary = () => {
                         <button
                           type="button"
                           className="table__btnbox-text"
-                          onClick={()=> handleClickDeleteItem(orderbuy.product.id)}
+                          onClick={() =>
+                            handleClickDeleteItem(orderbuy.product.id)
+                          }
                         >
                           QUITAR
                         </button>
@@ -133,4 +136,4 @@ const OrderSumary = () => {
   );
 };
 
-export default OrderSumary;
+export default OrderSummary;

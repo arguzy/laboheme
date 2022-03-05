@@ -1,5 +1,5 @@
-import firebase from 'firebase/app';
-import 'firebase/firestore';
+import firebase from "firebase/app";
+import "firebase/firestore";
 
 //const firebaseConfig = {
 //  apiKey: process.env.REACT_APP_API_KEY,
@@ -19,10 +19,11 @@ const firebaseConfig = {
   appId: "1:82455830141:web:40718e338a80dad7361b14",
 };
 
+const app = firebase.initializeApp(firebaseConfig);
 
+export const getFirebase = () => app;
 
-  const app = firebase.initializeApp(firebaseConfig);
+export const getFirestore = () => firebase.firestore(app);
 
-  export const getFirebase = () => app;
-
-  export const getFirestore = () => firebase.firestore(app);
+//A ser destacado. El .env así como esta es, descomentarlo y hacerlo funcionar. No tiene problemas de redacción. Pero en ocasiones, dependiendo del tiempo de respuesta de firebase y la velocidad de internet, tiraba errores.
+//Entiendo el porque y la seguridad que necesita una aplicación y que las credenciales no deben ser expuestas. Puesto que es un bache de seguridad muy grande que expone datos del administrador y del usuario de la aplicación.

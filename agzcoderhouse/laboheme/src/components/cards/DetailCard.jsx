@@ -1,18 +1,22 @@
 import React from "react";
-import "./Card.modules.css";
 import CounterTab from "../buttons/CounterTab";
 import { Link } from "react-router-dom";
 import { useCart } from "../../context/CartContext";
-import Modals from "../widgets/Modals";
+import ModalStop from "../widgets/ModalStop";
+import "./Card.modules.css";
 
 function DetailCard({ product, minus, plus, counter, amount, subtotal }) {
   const { addProduct, cart } = useCart();
+  //Este componente tiene por objetivo recibir una función y un state del context, donde dar lugar al proceso de agregar al array un indice con un objeto cuya composición será alojada en el State, llamado cart.
   const { imageSrc, name, ingredient, price, stock } = product;
-
+  //Se hace una desestructuración del array producto
   const handleClickAdd = () => {
     addProduct(product, counter, amount);
   };
+  // Función manejadore del evento onClick
 
+  //Este return tiene incorporado dos componentes, uno es parte del proceso de lifting StandUp State - El CounterTab
+  // el otro componente es un PopUp (ModalStop) condicional que emite un mensaje cuando el carro esta vacío y que caso contrario enlaza al sitio de order summary
   return (
     <section className="detailCard">
       <div className="detailCard__container">
@@ -58,11 +62,11 @@ function DetailCard({ product, minus, plus, counter, amount, subtotal }) {
               Agregar
             </button>
             <button className="detailCard__btnBuyNow">
-              <Modals
+              <ModalStop
                 buttonText={"Finalizar"}
                 message="Debes agregar algo al carrito"
                 cart={cart}
-                road={"/OrderSumary"}
+                road={"/OrderSummary"}
               />
             </button>
           </div>

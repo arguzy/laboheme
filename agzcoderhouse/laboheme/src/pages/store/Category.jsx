@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router";
-import { Link } from "react-router-dom";
 import ProductCard from "../../components/cards/ProductCard";
-import { RiArrowGoBackFill } from 'react-icons/ri';
+import PageNotFound from "../errors/PageNotFound";
 import Spinner from "../../components/widgets/Spinner";
 import { getFirestore } from "../../firebase";
-import PageNotFound from "../errors/PageNotFound";
-
+import { useParams } from "react-router";
+import { Link } from "react-router-dom";
+import { RiArrowGoBackFill } from "react-icons/ri";
+//Es una reproducción parte de ProductDetail.jsx y parte del Store.jsx. Cualquier explicación, necesaria se remite a los dos componentes
+//El aditivo que le diferencia un Switch para el css, más que nada.
 const Category = () => {
   const [data, setData] = useState([]);
   const [errors, setErrors] = useState(null);
@@ -55,10 +56,13 @@ const Category = () => {
     return <PageNotFound />;
   }
   return (
-      <section className="menu">
-        <div className="menu__comeBack">
-          <Link to='/Store'><RiArrowGoBackFill/>Volver</Link>
-        </div>
+    <section className="menu">
+      <div className="menu__comeBack">
+        <Link to="/Store">
+          <RiArrowGoBackFill />
+          Volver
+        </Link>
+      </div>
       <div className="menu__cover">
         <div className="menu__titleBox">
           <h1 className="menu__title">{banner}</h1>
@@ -67,7 +71,6 @@ const Category = () => {
         </div>
         <div className="menu__productBox">
           {data.map((product) => {
-        
             return (
               <div className="menu__product" key={product.id}>
                 <ProductCard

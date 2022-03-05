@@ -1,23 +1,20 @@
 import { useEffect, useState } from "react";
+import ModalForm from "../../components/widgets/ModalForm";
+import PageNotFound from "../errors/PageNotFound";
+import Spinner from "../../components/widgets/Spinner";
+import swal from "sweetalert";
+import { getFirestore } from "../../firebase";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
-import swal from "sweetalert";
-import ModalForm from "../../components/widgets/ModalForm";
-import Spinner from "../../components/widgets/Spinner";
-import { getFirestore } from "../../firebase";
-import PageNotFound from "../errors/PageNotFound";
 import "./Store.modules.css";
+//Es el componente que cierra el circulo del CRUD para la orden de take away del cliente. Este componente en el return toma la estructura del OrderSummary
 
 const Greeting = () => {
   const { orderId } = useParams();
   const [info, setInfo] = useState({});
   const [errors, setErrors] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-
-
-
-
-
+  // el useEffect para traer por el argumento que tiene el useParams, la data de la collection "ORDERCONFIRMED"
   useEffect(() => {
     setTimeout(() => {
       const db = getFirestore();
@@ -30,11 +27,9 @@ const Greeting = () => {
         .finally(() => setIsLoading(false));
     }, 1000);
   }, [orderId]);
-
-  //.then((res) =>{ if(!res.ok) console.log("La orden fue procesada pero no pudo ser expuesta, porque firestore demora demasiado")})
-
-
-  const handleClickDeleteOrder = () =>{
+  // el useEffect para ELIMINAR con el argumento que tiene el useParams, la data de la collection "ORDERCONFIRMED"
+  // acá se podía hacer un Batch. Era mucho mejor practica.
+  const handleClickDeleteOrder = () => {
     const db = getFirestore();
     setIsLoading(true);
     db.collection("ORDERCONFIRMED")
@@ -49,23 +44,21 @@ const Greeting = () => {
         deleteFail();
       })
       .finally(() => setIsLoading(false));
+  };
 
-  }
-
-  function deleteOk(){
+  function deleteOk() {
     swal(`La orden ha sido eliminada`, {
       buttons: false,
       timer: 1500,
     });
   }
 
-  function deleteFail(){
+  function deleteFail() {
     swal(`No has logrado eliminar la orden, intentalo nuevamente`, {
       buttons: false,
       timer: 3000,
     });
   }
-
 
   if (isLoading) {
     return <Spinner />;
@@ -97,13 +90,13 @@ const Greeting = () => {
               <Link to={"/"}>VOLVER</Link>
             </button>
             <button className="greetings__btnChangeOrder">
-              <ModalForm
-                buttonText={"ACTUALIZAR DATOS"}
-                orderId={orderId}
-              />
+              <ModalForm buttonText={"ACTUALIZAR DATOS"} orderId={orderId} />
             </button>
-            <button className="greetings__btnDeleteOrder" onClick={handleClickDeleteOrder}>
-            <Link to={"/"}>CANCELAR ORDEN</Link>
+            <button
+              className="greetings__btnDeleteOrder"
+              onClick={handleClickDeleteOrder}
+            >
+              <Link to={"/"}>CANCELAR ORDEN</Link>
             </button>
           </div>
         </div>

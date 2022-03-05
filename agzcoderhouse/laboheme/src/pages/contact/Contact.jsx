@@ -1,6 +1,7 @@
 import React from "react";
 import Map from "../../components/widgets/Map";
-import "./Contact.modules.css";
+import Hero from "../../components/widgets/Hero";
+import { LittleBanners } from "../../components/widgets/LittleBanners";
 import {
   GiLaurelsTrophy,
   GiFireSilhouette,
@@ -8,14 +9,17 @@ import {
   GiBreakingChain,
   GiHeartKey,
 } from "react-icons/gi";
-import { LittleBanners } from "../../components/widgets/LittleBanners";
-import Hero from "../../components/widgets/Hero";
-
+import "./Contact.modules.css";
+//contact es un componente meramente presentacional, no tiene aspectos de lógica o desarrollo de un algoritmo.
 const Contact = () => {
   return (
     <section className="contact">
       <article className="contact__hero">
-        <Hero backgrundHero="HeroContact" title="Welcome to the jungle" text="Watch it bring you to your sha-n-n-n-n-n-n-n-n knees, knees" />
+        <Hero
+          backgrundHero="HeroContact"
+          title="PARA SALUDARSE"
+          text="Hay que saber dónde, cuándo y porque!"
+        />
       </article>
       <article className="contact__drops">
         <span className="contact__titleBox">
@@ -77,10 +81,10 @@ const Contact = () => {
               <p>HORARIOS:</p>
             </li>
             <li className="contact__infoItem">
-              <p>12:00-12:00</p>
+              <p>9:00hs - 17:00hs </p>
             </li>
             <li className="contact__infoItem">
-              <p>20:00-00:00</p>
+              <p>20:00hs - 00:00hs</p>
             </li>
           </ul>
         </di>

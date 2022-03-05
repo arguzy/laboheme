@@ -2,13 +2,15 @@ import React from "react";
 import PageNotFound from "../../pages/errors/PageNotFound";
 import { useForm } from "../hooks/useForm";
 import Spinner from "../widgets/Spinner";
-import "./CheckOutForm.css"
+import "./CheckOutForm.css";
 
+//componente con el formulario del checkout, se trae por props las funciones del custom hook UseForm
 const initialForm = {
   name: "",
   email: "",
   phone: "",
 };
+//se construye el objeto con los valores a ser captados en el formulario
 
 const validationsForm = (form) => {
   let errors = {};
@@ -33,7 +35,7 @@ const validationsForm = (form) => {
   } else if (!errorPhone.test(form.phone.trim())) {
     errors.phone = "Revisa el número ejemplo, algo esta mal";
   }
-
+  //se introduce todas las validaciones de campos para el manejo de errores
   return errors;
 };
 
@@ -47,17 +49,20 @@ const CheckOutForm = () => {
     handleBlur,
     handleSubmit,
   } = useForm(initialForm, validationsForm);
-
+  //se traen todo lo que voy a usar del useForm
   if (loading) {
     return <Spinner />;
   } else if (faild) {
     return <PageNotFound />;
   }
+  //como el use form va a hacer un post, se incorpora el manejo de la espera de respuesta y el error ante la falla de la promise, en todo caso.
 
   return (
     <div className="checkOut__form">
       <form onSubmit={handleSubmit} className="checkOut__formFrame">
-        <label htmlFor="name" className="checkOut__formLabel">NOMBRE y APELLIDO</label>
+        <label htmlFor="name" className="checkOut__formLabel">
+          NOMBRE y APELLIDO
+        </label>
         <input
           type="text"
           id="name"
@@ -70,7 +75,9 @@ const CheckOutForm = () => {
         />
         {errors.name && <p className="checkOut__formError">{errors.name}</p>}
 
-        <label htmlFor="email" className="checkOut__formLabel">EMAIL</label>
+        <label htmlFor="email" className="checkOut__formLabel">
+          EMAIL
+        </label>
         <input
           type="email"
           id="email"
@@ -83,7 +90,9 @@ const CheckOutForm = () => {
         />
         {errors.email && <p className="checkOut__formError">{errors.email}</p>}
 
-        <label htmlFor="phone" className="checkOut__formLabel">TELÉFONO</label>
+        <label htmlFor="phone" className="checkOut__formLabel">
+          TELÉFONO
+        </label>
         <input
           type="number"
           id="phone"
@@ -96,7 +105,7 @@ const CheckOutForm = () => {
         />
         {errors.phone && <p className="checkOut__formError">{errors.phone}</p>}
 
-        <input type="submit" value="Enviar" className="checkOut__formButton"/>
+        <input type="submit" value="Enviar" className="checkOut__formButton" />
       </form>
     </div>
   );

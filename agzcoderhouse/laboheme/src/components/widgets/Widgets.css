@@ -61,7 +61,7 @@
 .modal__container {
   min-height: fit-content;
   width: 300px;
-  height: 351px;
+  height: 405px;
   position: relative;
   background-color: rgb(0, 0, 0);
   border-radius: 25px;
@@ -76,7 +76,7 @@
 .modal__text {
   min-height: fit-content;
   width: 295px;
-  height: 350px;
+  height: 400px;
   border-radius: 25px;
   padding: 10px;
   background: linear-gradient(

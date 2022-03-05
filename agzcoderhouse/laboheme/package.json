@@ -17,6 +17,7 @@
     "sweetalert": "^2.1.2",
     "web-vitals": "^2.1.4"
   },
+  "homepage": "https://labohemebar.000webhostapp.com/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

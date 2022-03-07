@@ -32,6 +32,10 @@ const preOrder = { product, quantity, amount };
         if (stoked > cart[index].product.stock) {
           //condicional por si el Stock es suficiente
           getAlert(cart[index].product.stock);
+          let measure = cart
+          .map((obj) => obj.quantity)
+          .reduce((preValue, currentValue) => preValue + currentValue, 0);
+        setCartLength(measure);
         } else {
           //Si hay stock, entonces se suman las cantidades y resultado reimprime en el objeto cuyo index ha sido encontrado como repetición
           let newAmount = cart[index].amount + preOrder.amount;
